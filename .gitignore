@@ -1,0 +1,30 @@
+# Virtual environments
+.venv/
+.venv-1/
+venv/
+env/
+
+# Large model weights & checkpoints
+trained_models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Large archives & raw dataset dumps (>100MB)
+CODE.zip
+*.zip
+*.parquet
+*siraplimau*
+
+# Python caches and logs
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.log
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

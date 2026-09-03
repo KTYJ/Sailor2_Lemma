@@ -1,0 +1,1069 @@
+{
+  "n_samples": 200,
+  "word_accuracy": 0.8638589618021547,
+  "total_correct": 2646,
+  "total_gold": 3063,
+  "n_unparseable": 11,
+  "n_exact_length_match": 187,
+  "examples": [
+    {
+      "sentence": "Mudah-mudahan dengan idea ini, si kecil lebih mudah tidur pada waktu yang ditetapkan dan tidak lagi berjaga malam!",
+      "gold": [
+        {
+          "surface": "Mudah-mudahan",
+          "lemma": "mudah"
+        },
+        {
+          "surface": "dengan",
+          "lemma": "dengan"
+        },
+        {
+          "surface": "idea",
+          "lemma": "idea"
+        },
+        {
+          "surface": "ini",
+          "lemma": "ini"
+        },
+        {
+          "surface": ",",
+          "lemma": ","
+        },
+        {
+          "surface": "si",
+          "lemma": "si"
+        },
+        {
+          "surface": "kecil",
+          "lemma": "kecil"
+        },
+        {
+          "surface": "lebih",
+          "lemma": "lebih"
+        },
+        {
+          "surface": "mudah",
+          "lemma": "mudah"
+        },
+        {
+          "surface": "tidur",
+          "lemma": "tidur"
+        },
+        {
+          "surface": "pada",
+          "lemma": "pada"
+        },
+        {
+          "surface": "waktu",
+          "lemma": "waktu"
+        },
+        {
+          "surface": "yang",
+          "lemma": "yang"
+        },
+        {
+          "surface": "ditetapkan",
+          "lemma": "tetap"
+        },
+        {
+          "surface": "dan",
+          "lemma": "dan"
+        },
+        {
+          "surface": "tidak",
+          "lemma": "tidak"
+        },
+        {
+          "surface": "lagi",
+          "lemma": "lagi"
+        },
+        {
+          "surface": "berjaga",
+          "lemma": "jaga"
+        },
+        {
+          "surface": "malam",
+          "lemma": "malam"
+        },
+        {
+          "surface": "!",
+          "lemma": "!"
+        }
+      ],
+      "predicted_raw": "[{\"surface\": \"Mudah-mudahan\", \"lemma\": \"mudah\"}, {\"surface\": \"dengan\", \"lemma\": \"dengan\"}, {\"surface\": \"idea\", \"lemma\": \"idea\"}, {\"surface\": \"ini\", \"lemma\": \"ini\"}, {\"surface\": \",\", \"lemma\": \",\"}, {\"surface\": \"si\", \"lemma\": \"si\"}, {\"surface\": \"kecil\", \"lemma\": \"kecil\"}, {\"surface\": \"lebih\", \"lemma\": \"lebih\"}, {\"surface\": \"mudah\", \"lemma\": \"mudah\"}, {\"surface\": \"tidur\", \"lemma\": \"tidur\"}, {\"surface\": \"pada\", \"lemma\": \"pada\"}, {\"surface\": \"waktu\", \"lemma\": \"waktu\"}, {\"surface\": \"yang\", \"lemma\": \"y",
+      "predicted_parsed": [
+        {
+          "surface": "Mudah-mudahan",
+          "lemma": "mudah"
+        },
+        {
+          "surface": "dengan",
+          "lemma": "dengan"
+        },
+        {
+          "surface": "idea",
+          "lemma": "idea"
+        },
+        {
+          "surface": "ini",
+          "lemma": "ini"
+        },
+        {
+          "surface": ",",
+          "lemma": ","
+        },
+        {
+          "surface": "si",
+          "lemma": "si"
+        },
+        {
+          "surface": "kecil",
+          "lemma": "kecil"
+        },
+        {
+          "surface": "lebih",
+          "lemma": "lebih"
+        },
+        {
+          "surface": "mudah",
+          "lemma": "mudah"
+        },
+        {
+          "surface": "tidur",
+          "lemma": "tidur"
+        },
+        {
+          "surface": "pada",
+          "lemma": "pada"
+        },
+        {
+          "surface": "waktu",
+          "lemma": "waktu"
+        },
+        {
+          "surface": "yang",
+          "lemma": "yang"
+        },
+        {
+          "surface": "ditetapkan",
+          "lemma": "tetap"
+        },
+        {
+          "surface": "dan",
+          "lemma": "dan"
+        },
+        {
+          "surface": "tidak",
+          "lemma": "tidak"
+        },
+        {
+          "surface": "lagi",
+          "lemma": "lagi"
+        },
+        {
+          "surface": "berjaga",
+          "lemma": "jaga"
+        },
+        {
+          "surface": "malam",
+          "lemma": "malam"
+        },
+        {
+          "surface": "!",
+          "lemma": "!"
+        }
+      ],
+      "correct": 20,
+      "n_gold": 20
+    },
+    {
+      "sentence": "Inisiatif 2: Tak cukup dengan itu, anda juga wajib beramai-ramai menyertai Moreh Digital Mingguan Goodday di ERA IG Live pada setiap hari Jumaat, jam 10 malam bersama Personaliti ERA dan Ustaz Don Daniyal.",
+      "gold": [
+        {
+          "surface": "Inisiatif",
+          "lemma": "inisiatif"
+        },
+        {
+          "surface": "2",
+          "lemma": "2"
+        },
+        {
+          "surface": ":",
+          "lemma": ":"
+        },
+        {
+          "surface": "Tak",
+          "lemma": "tak"
+        },
+        {
+          "surface": "cukup",
+          "lemma": "cukup"
+        },
+        {
+          "surface": "dengan",
+          "lemma": "dengan"
+        },
+        {
+          "surface": "itu",
+          "lemma": "itu"
+        },
+        {
+          "surface": ",",
+          "lemma": ","
+        },
+        {
+          "surface": "anda",
+          "lemma": "anda"
+        },
+        {
+          "surface": "juga",
+          "lemma": "juga"
+        },
+        {
+          "surface": "wajib",
+          "lemma": "wajib"
+        },
+        {
+          "surface": "beramai-ramai",
+          "lemma": "beramai-ramai"
+        },
+        {
+          "surface": "menyertai",
+          "lemma": "serta"
+        },
+        {
+          "surface": "Moreh",
+          "lemma": "moreh"
+        },
+        {
+          "surface": "Digital",
+          "lemma": "digital"
+        },
+        {
+          "surface": "Mingguan",
+          "lemma": "minggu"
+        },
+        {
+          "surface": "Goodday",
+          "lemma": "goodday"
+        },
+        {
+          "surface": "di",
+          "lemma": "di"
+        },
+        {
+          "surface": "ERA",
+          "lemma": "era"
+        },
+        {
+          "surface": "IG",
+          "lemma": "ig"
+        },
+        {
+          "surface": "Live",
+          "lemma": "live"
+        },
+        {
+          "surface": "pada",
+          "lemma": "pada"
+        },
+        {
+          "surface": "setiap",
+          "lemma": "tiap"
+        },
+        {
+          "surface": "hari",
+          "lemma": "hari"
+        },
+        {
+          "surface": "Jumaat",
+          "lemma": "jumaat"
+        },
+        {
+          "surface": ",",
+          "lemma": ","
+        },
+        {
+          "surface": "jam",
+          "lemma": "jam"
+        },
+        {
+          "surface": "10",
+          "lemma": "10"
+        },
+        {
+          "surface": "malam",
+          "lemma": "malam"
+        },
+        {
+          "surface": "bersama",
+          "lemma": "sama"
+        },
+        {
+          "surface": "Personaliti",
+          "lemma": "personaliti"
+        },
+        {
+          "surface": "ERA",
+          "lemma": "era"
+        },
+        {
+          "surface": "dan",
+          "lemma": "dan"
+        },
+        {
+          "surface": "Ustaz",
+          "lemma": "ustaz"
+        },
+        {
+          "surface": "Don",
+          "lemma": "don"
+        },
+        {
+          "surface": "Daniyal",
+          "lemma": "daniyal"
+        },
+        {
+          "surface": ".",
+          "lemma": "."
+        }
+      ],
+      "predicted_raw": "[{\"surface\": \"Inisiatif\", \"lemma\": \"inisiatif\"}, {\"surface\": \"2\", \"lemma\": \"2\"}, {\"surface\": \":\", \"lemma\": \":\"}, {\"surface\": \"Tak\", \"lemma\": \"tak\"}, {\"surface\": \"cukup\", \"lemma\": \"cukup\"}, {\"surface\": \"dengan\", \"lemma\": \"dengan\"}, {\"surface\": \"itu\", \"lemma\": \"itu\"}, {\"surface\": \",\", \"lemma\": \",\"}, {\"surface\": \"anda\", \"lemma\": \"anda\"}, {\"surface\": \"juga\", \"lemma\": \"juga\"}, {\"surface\": \"wajib\", \"lemma\": \"wajib\"}, {\"surface\": \"beramai-ramai\", \"lemma\": \"beramai-ramai\"}, {\"surface\": \"menyertai\", \"lem",
+      "predicted_parsed": null,
+      "correct": 0,
+      "n_gold": 37
+    },
+    {
+      "sentence": "Tak salah nak masak sup sahaja, tetapi kalau asyik masak resipi sup yang sama sahaja pun boleh boring juga.",
+      "gold": [
+        {
+          "surface": "Tak",
+          "lemma": "tak"
+        },
+        {
+          "surface": "salah",
+          "lemma": "salah"
+        },
+        {
+          "surface": "nak",
+          "lemma": "hendak"
+        },
+        {
+          "surface": "masak",
+          "lemma": "masak"
+        },
+        {
+          "surface": "sup",
+          "lemma": "sup"
+        },
+        {
+          "surface": "sahaja",
+          "lemma": "sahaja"
+        },
+        {
+          "surface": ",",
+          "lemma": ","
+        },
+        {
+          "surface": "tetapi",
+          "lemma": "tetapi"
+        },
+        {
+          "surface": "kalau",
+          "lemma": "kalau"
+        },
+        {
+          "surface": "asyik",
+          "lemma": "asyik"
+        },
+        {
+          "surface": "masak",
+          "lemma": "masak"
+        },
+        {
+          "surface": "resipi",
+          "lemma": "resipi"
+        },
+        {
+          "surface": "sup",
+          "lemma": "sup"
+        },
+        {
+          "surface": "yang",
+          "lemma": "yang"
+        },
+        {
+          "surface": "sama",
+          "lemma": "sama"
+        },
+        {
+          "surface": "sahaja",
+          "lemma": "sahaja"
+        },
+        {
+          "surface": "pun",
+          "lemma": "pun"
+        },
+        {
+          "surface": "boleh",
+          "lemma": "boleh"
+        },
+        {
+          "surface": "boring",
+          "lemma": "boring"
+        },
+        {
+          "surface": "juga",
+          "lemma": "juga"
+        },
+        {
+          "surface": ".",
+          "lemma": "."
+        }
+      ],
+      "predicted_raw": "[{\"surface\": \"Tak\", \"lemma\": \"tak\"}, {\"surface\": \"salah\", \"lemma\": \"salah\"}, {\"surface\": \"nak\", \"lemma\": \"hendak\"}, {\"surface\": \"masak\", \"lemma\": \"masak\"}, {\"surface\": \"sup\", \"lemma\": \"sup\"}, {\"surface\": \"sahaja\", \"lemma\": \"sahaja\"}, {\"surface\": \",\", \"lemma\": \",\"}, {\"surface\": \"tetapi\", \"lemma\": \"tetapi\"}, {\"surface\": \"kalau\", \"lemma\": \"kalau\"}, {\"surface\": \"asyik\", \"lemma\": \"asyik\"}, {\"surface\": \"masak\", \"lemma\": \"masak\"}, {\"surface\": \"resipi\", \"lemma\": \"resipi\"}, {\"surface\": \"sup\", \"lemma\": \"s",
+      "predicted_parsed": [
+        {
+          "surface": "Tak",
+          "lemma": "tak"
+        },
+        {
+          "surface": "salah",
+          "lemma": "salah"
+        },
+        {
+          "surface": "nak",
+          "lemma": "hendak"
+        },
+        {
+          "surface": "masak",
+          "lemma": "masak"
+        },
+        {
+          "surface": "sup",
+          "lemma": "sup"
+        },
+        {
+          "surface": "sahaja",
+          "lemma": "sahaja"
+        },
+        {
+          "surface": ",",
+          "lemma": ","
+        },
+        {
+          "surface": "tetapi",
+          "lemma": "tetapi"
+        },
+        {
+          "surface": "kalau",
+          "lemma": "kalau"
+        },
+        {
+          "surface": "asyik",
+          "lemma": "asyik"
+        },
+        {
+          "surface": "masak",
+          "lemma": "masak"
+        },
+        {
+          "surface": "resipi",
+          "lemma": "resipi"
+        },
+        {
+          "surface": "sup",
+          "lemma": "sup"
+        },
+        {
+          "surface": "yang",
+          "lemma": "yang"
+        },
+        {
+          "surface": "sama",
+          "lemma": "sama"
+        },
+        {
+          "surface": "sahaja",
+          "lemma": "sahaja"
+        },
+        {
+          "surface": "pun",
+          "lemma": "pun"
+        },
+        {
+          "surface": "boleh",
+          "lemma": "boleh"
+        },
+        {
+          "surface": "boring",
+          "lemma": "boring"
+        },
+        {
+          "surface": "juga",
+          "lemma": "juga"
+        },
+        {
+          "surface": ".",
+          "lemma": "."
+        }
+      ],
+      "correct": 21,
+      "n_gold": 21
+    },
+    {
+      "sentence": "Untuk pengetahuan anda, terdapat satu cara menggunakan teknik 'grounding' iaitu membiarkan anak bermain dengan tanah pada waktu siang.",
+      "gold": [
+        {
+          "surface": "Untuk",
+          "lemma": "untuk"
+        },
+        {
+          "surface": "pengetahuan",
+          "lemma": "tahu"
+        },
+        {
+          "surface": "anda",
+          "lemma": "anda"
+        },
+        {
+          "surface": ",",
+          "lemma": ","
+        },
+        {
+          "surface": "terdapat",
+          "lemma": "dapat"
+        },
+        {
+          "surface": "satu",
+          "lemma": "satu"
+        },
+        {
+          "surface": "cara",
+          "lemma": "cara"
+        },
+        {
+          "surface": "menggunakan",
+          "lemma": "guna"
+        },
+        {
+          "surface": "teknik",
+          "lemma": "teknik"
+        },
+        {
+          "surface": "'",
+          "lemma": "'"
+        },
+        {
+          "surface": "grounding",
+          "lemma": "grounding"
+        },
+        {
+          "surface": "'",
+          "lemma": "'"
+        },
+        {
+          "surface": "iaitu",
+          "lemma": "iaitu"
+        },
+        {
+          "surface": "membiarkan",
+          "lemma": "biar"
+        },
+        {
+          "surface": "anak",
+          "lemma": "anak"
+        },
+        {
+          "surface": "bermain",
+          "lemma": "main"
+        },
+        {
+          "surface": "dengan",
+          "lemma": "dengan"
+        },
+        {
+          "surface": "tanah",
+          "lemma": "tanah"
+        },
+        {
+          "surface": "pada",
+          "lemma": "pada"
+        },
+        {
+          "surface": "waktu",
+          "lemma": "waktu"
+        },
+        {
+          "surface": "siang",
+          "lemma": "siang"
+        },
+        {
+          "surface": ".",
+          "lemma": "."
+        }
+      ],
+      "predicted_raw": "[{\"surface\": \"Untuk\", \"lemma\": \"untuk\"}, {\"surface\": \"pengetahuan\", \"lemma\": \"tahu\"}, {\"surface\": \"anda\", \"lemma\": \"anda\"}, {\"surface\": \",\", \"lemma\": \",\"}, {\"surface\": \"terdapat\", \"lemma\": \"dapat\"}, {\"surface\": \"satu\", \"lemma\": \"satu\"}, {\"surface\": \"cara\", \"lemma\": \"cara\"}, {\"surface\": \"menggunakan\", \"lemma\": \"guna\"}, {\"surface\": \"teknik\", \"lemma\": \"teknik\"}, {\"surface\": \"'\", \"lemma\": \"'\"}, {\"surface\": \"grounding\", \"lemma\": \"grounding\"}, {\"surface\": \"'\", \"lemma\": \"'\"}, {\"surface\": \"iaitu\", \"lemm",
+      "predicted_parsed": [
+        {
+          "surface": "Untuk",
+          "lemma": "untuk"
+        },
+        {
+          "surface": "pengetahuan",
+          "lemma": "tahu"
+        },
+        {
+          "surface": "anda",
+          "lemma": "anda"
+        },
+        {
+          "surface": ",",
+          "lemma": ","
+        },
+        {
+          "surface": "terdapat",
+          "lemma": "dapat"
+        },
+        {
+          "surface": "satu",
+          "lemma": "satu"
+        },
+        {
+          "surface": "cara",
+          "lemma": "cara"
+        },
+        {
+          "surface": "menggunakan",
+          "lemma": "guna"
+        },
+        {
+          "surface": "teknik",
+          "lemma": "teknik"
+        },
+        {
+          "surface": "'",
+          "lemma": "'"
+        },
+        {
+          "surface": "grounding",
+          "lemma": "grounding"
+        },
+        {
+          "surface": "'",
+          "lemma": "'"
+        },
+        {
+          "surface": "iaitu",
+          "lemma": "iaitu"
+        },
+        {
+          "surface": "membiarkan",
+          "lemma": "biar"
+        },
+        {
+          "surface": "anak",
+          "lemma": "anak"
+        },
+        {
+          "surface": "bermain",
+          "lemma": "main"
+        },
+        {
+          "surface": "dengan",
+          "lemma": "dengan"
+        },
+        {
+          "surface": "tanah",
+          "lemma": "tanah"
+        },
+        {
+          "surface": "pada",
+          "lemma": "pada"
+        },
+        {
+          "surface": "waktu",
+          "lemma": "waktu"
+        },
+        {
+          "surface": "siang",
+          "lemma": "siang"
+        },
+        {
+          "surface": ".",
+          "lemma": "."
+        }
+      ],
+      "correct": 22,
+      "n_gold": 22
+    },
+    {
+      "sentence": "Bila menjadi tu memang sedap dimakan!",
+      "gold": [
+        {
+          "surface": "Bila",
+          "lemma": "bila"
+        },
+        {
+          "surface": "menjadi",
+          "lemma": "jadi"
+        },
+        {
+          "surface": "tu",
+          "lemma": "itu"
+        },
+        {
+          "surface": "memang",
+          "lemma": "memang"
+        },
+        {
+          "surface": "sedap",
+          "lemma": "sedap"
+        },
+        {
+          "surface": "dimakan",
+          "lemma": "makan"
+        },
+        {
+          "surface": "!",
+          "lemma": "!"
+        }
+      ],
+      "predicted_raw": "[{\"surface\": \"Bila\", \"lemma\": \"bila\"}, {\"surface\": \"menjadi\", \"lemma\": \"jadi\"}, {\"surface\": \"tu\", \"lemma\": \"itu\"}, {\"surface\": \"memang\", \"lemma\": \"memang\"}, {\"surface\": \"sedap\", \"lemma\": \"sedap\"}, {\"surface\": \"dimakan\", \"lemma\": \"makan\"}, {\"surface\": \"!\", \"lemma\": \"!\"}]",
+      "predicted_parsed": [
+        {
+          "surface": "Bila",
+          "lemma": "bila"
+        },
+        {
+          "surface": "menjadi",
+          "lemma": "jadi"
+        },
+        {
+          "surface": "tu",
+          "lemma": "itu"
+        },
+        {
+          "surface": "memang",
+          "lemma": "memang"
+        },
+        {
+          "surface": "sedap",
+          "lemma": "sedap"
+        },
+        {
+          "surface": "dimakan",
+          "lemma": "makan"
+        },
+        {
+          "surface": "!",
+          "lemma": "!"
+        }
+      ],
+      "correct": 7,
+      "n_gold": 7
+    },
+    {
+      "sentence": "Nak simpan pun dah tak ada ruang.",
+      "gold": [
+        {
+          "surface": "Nak",
+          "lemma": "hendak"
+        },
+        {
+          "surface": "simpan",
+          "lemma": "simpan"
+        },
+        {
+          "surface": "pun",
+          "lemma": "pun"
+        },
+        {
+          "surface": "dah",
+          "lemma": "sudah"
+        },
+        {
+          "surface": "tak",
+          "lemma": "tak"
+        },
+        {
+          "surface": "ada",
+          "lemma": "ada"
+        },
+        {
+          "surface": "ruang",
+          "lemma": "ruang"
+        },
+        {
+          "surface": ".",
+          "lemma": "."
+        }
+      ],
+      "predicted_raw": "[{\"surface\": \"Nak\", \"lemma\": \"hendak\"}, {\"surface\": \"simpan\", \"lemma\": \"simpan\"}, {\"surface\": \"pun\", \"lemma\": \"pun\"}, {\"surface\": \"dah\", \"lemma\": \"sudah\"}, {\"surface\": \"tak\", \"lemma\": \"tak\"}, {\"surface\": \"ada\", \"lemma\": \"ada\"}, {\"surface\": \"ruang\", \"lemma\": \"ruang\"}, {\"surface\": \".\", \"lemma\": \".\"}]",
+      "predicted_parsed": [
+        {
+          "surface": "Nak",
+          "lemma": "hendak"
+        },
+        {
+          "surface": "simpan",
+          "lemma": "simpan"
+        },
+        {
+          "surface": "pun",
+          "lemma": "pun"
+        },
+        {
+          "surface": "dah",
+          "lemma": "sudah"
+        },
+        {
+          "surface": "tak",
+          "lemma": "tak"
+        },
+        {
+          "surface": "ada",
+          "lemma": "ada"
+        },
+        {
+          "surface": "ruang",
+          "lemma": "ruang"
+        },
+        {
+          "surface": ".",
+          "lemma": "."
+        }
+      ],
+      "correct": 8,
+      "n_gold": 8
+    },
+    {
+      "sentence": "Memang hotel ni belakang pintu masjid.",
+      "gold": [
+        {
+          "surface": "Memang",
+          "lemma": "memang"
+        },
+        {
+          "surface": "hotel",
+          "lemma": "hotel"
+        },
+        {
+          "surface": "ni",
+          "lemma": "ini"
+        },
+        {
+          "surface": "belakang",
+          "lemma": "belakang"
+        },
+        {
+          "surface": "pintu",
+          "lemma": "pintu"
+        },
+        {
+          "surface": "masjid",
+          "lemma": "masjid"
+        },
+        {
+          "surface": ".",
+          "lemma": "."
+        }
+      ],
+      "predicted_raw": "[{\"surface\": \"Memang\", \"lemma\": \"memang\"}, {\"surface\": \"hotel\", \"lemma\": \"hotel\"}, {\"surface\": \"ni\", \"lemma\": \"ini\"}, {\"surface\": \"belakang\", \"lemma\": \"belakang\"}, {\"surface\": \"pintu\", \"lemma\": \"pintu\"}, {\"surface\": \"masjid\", \"lemma\": \"masjid\"}, {\"surface\": \".\", \"lemma\": \".\"}]",
+      "predicted_parsed": [
+        {
+          "surface": "Memang",
+          "lemma": "memang"
+        },
+        {
+          "surface": "hotel",
+          "lemma": "hotel"
+        },
+        {
+          "surface": "ni",
+          "lemma": "ini"
+        },
+        {
+          "surface": "belakang",
+          "lemma": "belakang"
+        },
+        {
+          "surface": "pintu",
+          "lemma": "pintu"
+        },
+        {
+          "surface": "masjid",
+          "lemma": "masjid"
+        },
+        {
+          "surface": ".",
+          "lemma": "."
+        }
+      ],
+      "correct": 7,
+      "n_gold": 7
+    },
+    {
+      "sentence": "Ini bukan tentang melupakan apa yang berlaku tetapi lebih baik meneruskan dari kesakitan dan kesakitan yang kita alami.",
+      "gold": [
+        {
+          "surface": "Ini",
+          "lemma": "ini"
+        },
+        {
+          "surface": "bukan",
+          "lemma": "bukan"
+        },
+        {
+          "surface": "tentang",
+          "lemma": "tentang"
+        },
+        {
+          "surface": "melupakan",
+          "lemma": "lupa"
+        },
+        {
+          "surface": "apa",
+          "lemma": "apa"
+        },
+        {
+          "surface": "yang",
+          "lemma": "yang"
+        },
+        {
+          "surface": "berlaku",
+          "lemma": "laku"
+        },
+        {
+          "surface": "tetapi",
+          "lemma": "tetapi"
+        },
+        {
+          "surface": "lebih",
+          "lemma": "lebih"
+        },
+        {
+          "surface": "baik",
+          "lemma": "baik"
+        },
+        {
+          "surface": "meneruskan",
+          "lemma": "terus"
+        },
+        {
+          "surface": "dari",
+          "lemma": "dari"
+        },
+        {
+          "surface": "kesakitan",
+          "lemma": "sakit"
+        },
+        {
+          "surface": "dan",
+          "lemma": "dan"
+        },
+        {
+          "surface": "kesakitan",
+          "lemma": "sakit"
+        },
+        {
+          "surface": "yang",
+          "lemma": "yang"
+        },
+        {
+          "surface": "kita",
+          "lemma": "kita"
+        },
+        {
+          "surface": "alami",
+          "lemma": "alami"
+        },
+        {
+          "surface": ".",
+          "lemma": "."
+        }
+      ],
+      "predicted_raw": "[{\"surface\": \"Ini\", \"lemma\": \"ini\"}, {\"surface\": \"bukan\", \"lemma\": \"bukan\"}, {\"surface\": \"tentang\", \"lemma\": \"tentang\"}, {\"surface\": \"melupakan\", \"lemma\": \"lupa\"}, {\"surface\": \"apa\", \"lemma\": \"apa\"}, {\"surface\": \"yang\", \"lemma\": \"yang\"}, {\"surface\": \"berlaku\", \"lemma\": \"laku\"}, {\"surface\": \"tetapi\", \"lemma\": \"tetapi\"}, {\"surface\": \"lebih\", \"lemma\": \"lebih\"}, {\"surface\": \"baik\", \"lemma\": \"baik\"}, {\"surface\": \"meneruskan\", \"lemma\": \"terus\"}, {\"surface\": \"dari\", \"lemma\": \"dari\"}, {\"surface\": \"kesak",
+      "predicted_parsed": [
+        {
+          "surface": "Ini",
+          "lemma": "ini"
+        },
+        {
+          "surface": "bukan",
+          "lemma": "bukan"
+        },
+        {
+          "surface": "tentang",
+          "lemma": "tentang"
+        },
+        {
+          "surface": "melupakan",
+          "lemma": "lupa"
+        },
+        {
+          "surface": "apa",
+          "lemma": "apa"
+        },
+        {
+          "surface": "yang",
+          "lemma": "yang"
+        },
+        {
+          "surface": "berlaku",
+          "lemma": "laku"
+        },
+        {
+          "surface": "tetapi",
+          "lemma": "tetapi"
+        },
+        {
+          "surface": "lebih",
+          "lemma": "lebih"
+        },
+        {
+          "surface": "baik",
+          "lemma": "baik"
+        },
+        {
+          "surface": "meneruskan",
+          "lemma": "terus"
+        },
+        {
+          "surface": "dari",
+          "lemma": "dari"
+        },
+        {
+          "surface": "kesakitan",
+          "lemma": "sakit"
+        },
+        {
+          "surface": "dan",
+          "lemma": "dan"
+        },
+        {
+          "surface": "kesakitan",
+          "lemma": "sakit"
+        },
+        {
+          "surface": "yang",
+          "lemma": "yang"
+        },
+        {
+          "surface": "kita",
+          "lemma": "kita"
+        },
+        {
+          "surface": "alami",
+          "lemma": "alami"
+        },
+        {
+          "surface": ".",
+          "lemma": "."
+        }
+      ],
+      "correct": 19,
+      "n_gold": 19
+    }
+  ]
+}
