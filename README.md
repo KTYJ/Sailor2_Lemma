@@ -18,27 +18,7 @@ words and punctuation untouched.
 
 ## Pipeline
 
-```
- raw scrape                cleaning notebook              SFT data builder
- siraplimau.com.jsonl  ──►  malay_corpus_cleaning_   ──►  build_lemma_sft_data.py
- data/raw/*.json            pipeline.ipynb                       │
-                                   │                             ▼
-                                   │                   cleaned/lemma_sft_train.jsonl
-                                   ▼                   cleaned/lemma_sft_eval.jsonl
-                        cleaned/siraplimau_cleaned.*           │
-                        cleaned/word_lemma_dictionary.json     │
-                                                               ▼
-                                                     train_lemmatizer_lora.py   (Sailor2)
-                                                     train_llama_lemmatizer_lora.py (Llama, comparison)
-                                                               │
-                                                               ▼
-                                                     trained_models/<model>/  (merged fp16 + tokenizer)
-                                                               │
-                        ┌──────────────────────────────────────┼───────────────────────┐
-                        ▼                                       ▼                       ▼
-              eval_lemmatizer_heldout.py            run_comparison.py            app.py / demo_lemmatizer.py
-              (proposed model, held-out)     (all systems, shared harness)     (interactive / qualitative)
-```
+![Pipeline Workflow](workflow.png)
 
 ### 1. Corpus cleaning — `malay_corpus_cleaning_pipeline.ipynb`
 
