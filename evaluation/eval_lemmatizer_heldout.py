@@ -12,8 +12,8 @@ from pathlib import Path
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-MODEL_DIR = "./trained_models/sailor2_malay_lemmatizer"
-EVAL_PATH = Path("cleaned/lemma_sft_eval.jsonl")
+MODEL_DIR = Path(Path.cwd(), "trained_models", "sailor2_malay_lemmatizer")
+EVAL_PATH = Path(Path.cwd(), "cleaned", "lemma_sft_eval.jsonl")
 N_EVAL_SAMPLES = 200
 RANDOM_STATE = 7
 
@@ -149,7 +149,7 @@ def main():
         else:
             print("  !! could not parse JSON:", ex["predicted_raw"])
 
-    Path("eval_lemmatizer_heldout_results.json").write_text(
+    Path(Path.cwd(), "eval_lemmatizer_heldout_results.json").write_text(
         json.dumps({
             "n_samples": len(sample),
             "word_accuracy": total_correct / total_gold,
