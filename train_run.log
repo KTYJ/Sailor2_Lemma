@@ -1,0 +1,174 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading tokenizer/base model: sail/Sailor2-3B-Chat
+Loading weights:   0%|          | 0/387 [00:00<?, ?it/s]Loading weights: 100%|##########| 387/387 [00:00<00:00, 18428.86it/s]
+C:\Users\User\Desktop\NLP\.venv-1\Lib\site-packages\torch\cuda\__init__.py:287: UserWarning: 
+NVIDIA GeForce RTX 5090 with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 sm_75 sm_80 sm_86 sm_90 compute_37.
+If you want to use the NVIDIA GeForce RTX 5090 GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(
+trainable params: 26,685,440 || all params: 3,606,542,848 || trainable%: 0.7399
+Training on 12000 sentences
+Steps/epoch: 750, total optimizer steps: 1500
+epoch 0 step 10/1500 loss=1.0616 elapsed=0.9min lr=2.22e-05
+epoch 0 step 20/1500 loss=0.3527 elapsed=1.7min lr=4.44e-05
+epoch 0 step 30/1500 loss=0.1714 elapsed=2.6min lr=6.67e-05
+epoch 0 step 40/1500 loss=0.0856 elapsed=3.4min lr=8.89e-05
+epoch 0 step 50/1500 loss=0.0540 elapsed=4.3min lr=9.97e-05
+epoch 0 step 60/1500 loss=0.0311 elapsed=5.1min lr=9.90e-05
+epoch 0 step 70/1500 loss=0.0245 elapsed=6.0min lr=9.83e-05
+epoch 0 step 80/1500 loss=0.0265 elapsed=6.8min lr=9.76e-05
+epoch 0 step 90/1500 loss=0.0231 elapsed=7.7min lr=9.69e-05
+epoch 0 step 100/1500 loss=0.0201 elapsed=8.5min lr=9.62e-05
+epoch 0 step 110/1500 loss=0.0198 elapsed=9.4min lr=9.55e-05
+epoch 0 step 120/1500 loss=0.0173 elapsed=10.2min lr=9.48e-05
+epoch 0 step 130/1500 loss=0.0113 elapsed=11.1min lr=9.42e-05
+epoch 0 step 140/1500 loss=0.0161 elapsed=11.9min lr=9.35e-05
+epoch 0 step 150/1500 loss=0.0096 elapsed=12.8min lr=9.28e-05
+epoch 0 step 160/1500 loss=0.0123 elapsed=13.6min lr=9.21e-05
+epoch 0 step 170/1500 loss=0.0137 elapsed=14.5min lr=9.14e-05
+epoch 0 step 180/1500 loss=0.0112 elapsed=15.3min lr=9.07e-05
+epoch 0 step 190/1500 loss=0.0112 elapsed=16.2min lr=9.00e-05
+epoch 0 step 200/1500 loss=0.0117 elapsed=17.0min lr=8.93e-05
+Saving checkpoint at step 200 -> trained_models\lora_checkpoint_partial
+epoch 0 step 210/1500 loss=0.0092 elapsed=17.9min lr=8.87e-05
+epoch 0 step 220/1500 loss=0.0104 elapsed=18.7min lr=8.80e-05
+epoch 0 step 230/1500 loss=0.0101 elapsed=19.6min lr=8.73e-05
+epoch 0 step 240/1500 loss=0.0090 elapsed=20.4min lr=8.66e-05
+epoch 0 step 250/1500 loss=0.0097 elapsed=21.2min lr=8.59e-05
+epoch 0 step 260/1500 loss=0.0060 elapsed=22.1min lr=8.52e-05
+epoch 0 step 270/1500 loss=0.0090 elapsed=22.9min lr=8.45e-05
+epoch 0 step 280/1500 loss=0.0074 elapsed=23.8min lr=8.38e-05
+epoch 0 step 290/1500 loss=0.0071 elapsed=24.6min lr=8.32e-05
+epoch 0 step 300/1500 loss=0.0090 elapsed=25.4min lr=8.25e-05
+epoch 0 step 310/1500 loss=0.0075 elapsed=26.3min lr=8.18e-05
+epoch 0 step 320/1500 loss=0.0067 elapsed=27.1min lr=8.11e-05
+epoch 0 step 330/1500 loss=0.0101 elapsed=28.0min lr=8.04e-05
+epoch 0 step 340/1500 loss=0.0073 elapsed=28.8min lr=7.97e-05
+epoch 0 step 350/1500 loss=0.0064 elapsed=29.7min lr=7.90e-05
+epoch 0 step 360/1500 loss=0.0082 elapsed=30.5min lr=7.84e-05
+epoch 0 step 370/1500 loss=0.0058 elapsed=31.3min lr=7.77e-05
+epoch 0 step 380/1500 loss=0.0066 elapsed=32.2min lr=7.70e-05
+epoch 0 step 390/1500 loss=0.0083 elapsed=33.0min lr=7.63e-05
+epoch 0 step 400/1500 loss=0.0067 elapsed=33.9min lr=7.56e-05
+Saving checkpoint at step 400 -> trained_models\lora_checkpoint_partial
+epoch 0 step 410/1500 loss=0.0047 elapsed=34.7min lr=7.49e-05
+epoch 0 step 420/1500 loss=0.0056 elapsed=35.6min lr=7.42e-05
+epoch 0 step 430/1500 loss=0.0042 elapsed=36.4min lr=7.35e-05
+epoch 0 step 440/1500 loss=0.0072 elapsed=37.3min lr=7.29e-05
+epoch 0 step 450/1500 loss=0.0072 elapsed=38.1min lr=7.22e-05
+epoch 0 step 460/1500 loss=0.0077 elapsed=38.9min lr=7.15e-05
+epoch 0 step 470/1500 loss=0.0078 elapsed=39.8min lr=7.08e-05
+epoch 0 step 480/1500 loss=0.0049 elapsed=40.6min lr=7.01e-05
+epoch 0 step 490/1500 loss=0.0055 elapsed=41.5min lr=6.94e-05
+epoch 0 step 500/1500 loss=0.0068 elapsed=42.3min lr=6.87e-05
+epoch 0 step 510/1500 loss=0.0059 elapsed=43.2min lr=6.80e-05
+epoch 0 step 520/1500 loss=0.0036 elapsed=44.0min lr=6.74e-05
+epoch 0 step 530/1500 loss=0.0058 elapsed=44.9min lr=6.67e-05
+epoch 0 step 540/1500 loss=0.0046 elapsed=45.7min lr=6.60e-05
+epoch 0 step 550/1500 loss=0.0052 elapsed=46.6min lr=6.53e-05
+epoch 0 step 560/1500 loss=0.0056 elapsed=47.4min lr=6.46e-05
+epoch 0 step 570/1500 loss=0.0048 elapsed=48.3min lr=6.39e-05
+epoch 0 step 580/1500 loss=0.0042 elapsed=49.1min lr=6.32e-05
+epoch 0 step 590/1500 loss=0.0044 elapsed=50.0min lr=6.25e-05
+epoch 0 step 600/1500 loss=0.0051 elapsed=50.8min lr=6.19e-05
+Saving checkpoint at step 600 -> trained_models\lora_checkpoint_partial
+epoch 0 step 610/1500 loss=0.0033 elapsed=51.7min lr=6.12e-05
+epoch 0 step 620/1500 loss=0.0062 elapsed=52.5min lr=6.05e-05
+epoch 0 step 630/1500 loss=0.0054 elapsed=53.4min lr=5.98e-05
+epoch 0 step 640/1500 loss=0.0039 elapsed=54.2min lr=5.91e-05
+epoch 0 step 650/1500 loss=0.0034 elapsed=55.0min lr=5.84e-05
+epoch 0 step 660/1500 loss=0.0054 elapsed=55.9min lr=5.77e-05
+epoch 0 step 670/1500 loss=0.0049 elapsed=56.8min lr=5.70e-05
+epoch 0 step 680/1500 loss=0.0048 elapsed=57.6min lr=5.64e-05
+epoch 0 step 690/1500 loss=0.0042 elapsed=58.5min lr=5.57e-05
+epoch 0 step 700/1500 loss=0.0040 elapsed=59.3min lr=5.50e-05
+epoch 0 step 710/1500 loss=0.0051 elapsed=60.2min lr=5.43e-05
+epoch 0 step 720/1500 loss=0.0043 elapsed=61.0min lr=5.36e-05
+epoch 0 step 730/1500 loss=0.0031 elapsed=61.9min lr=5.29e-05
+epoch 0 step 740/1500 loss=0.0034 elapsed=62.7min lr=5.22e-05
+epoch 0 step 750/1500 loss=0.0039 elapsed=63.6min lr=5.15e-05
+epoch 1 step 760/1500 loss=0.0025 elapsed=64.5min lr=5.09e-05
+epoch 1 step 770/1500 loss=0.0018 elapsed=65.3min lr=5.02e-05
+epoch 1 step 780/1500 loss=0.0023 elapsed=66.1min lr=4.95e-05
+epoch 1 step 790/1500 loss=0.0024 elapsed=67.0min lr=4.88e-05
+epoch 1 step 800/1500 loss=0.0023 elapsed=67.8min lr=4.81e-05
+Saving checkpoint at step 800 -> trained_models\lora_checkpoint_partial
+epoch 1 step 810/1500 loss=0.0024 elapsed=68.7min lr=4.74e-05
+epoch 1 step 820/1500 loss=0.0022 elapsed=69.5min lr=4.67e-05
+epoch 1 step 830/1500 loss=0.0012 elapsed=70.4min lr=4.60e-05
+epoch 1 step 840/1500 loss=0.0021 elapsed=71.2min lr=4.54e-05
+epoch 1 step 850/1500 loss=0.0013 elapsed=72.1min lr=4.47e-05
+epoch 1 step 860/1500 loss=0.0028 elapsed=72.9min lr=4.40e-05
+epoch 1 step 870/1500 loss=0.0016 elapsed=73.8min lr=4.33e-05
+epoch 1 step 880/1500 loss=0.0018 elapsed=74.6min lr=4.26e-05
+epoch 1 step 890/1500 loss=0.0021 elapsed=75.5min lr=4.19e-05
+epoch 1 step 900/1500 loss=0.0019 elapsed=76.3min lr=4.12e-05
+epoch 1 step 910/1500 loss=0.0021 elapsed=77.2min lr=4.05e-05
+epoch 1 step 920/1500 loss=0.0017 elapsed=78.0min lr=3.99e-05
+epoch 1 step 930/1500 loss=0.0033 elapsed=78.9min lr=3.92e-05
+epoch 1 step 940/1500 loss=0.0015 elapsed=79.8min lr=3.85e-05
+epoch 1 step 950/1500 loss=0.0026 elapsed=80.6min lr=3.78e-05
+epoch 1 step 960/1500 loss=0.0020 elapsed=81.5min lr=3.71e-05
+epoch 1 step 970/1500 loss=0.0015 elapsed=82.3min lr=3.64e-05
+epoch 1 step 980/1500 loss=0.0022 elapsed=83.2min lr=3.57e-05
+epoch 1 step 990/1500 loss=0.0019 elapsed=84.0min lr=3.51e-05
+epoch 1 step 1000/1500 loss=0.0011 elapsed=84.9min lr=3.44e-05
+Saving checkpoint at step 1000 -> trained_models\lora_checkpoint_partial
+epoch 1 step 1010/1500 loss=0.0012 elapsed=85.7min lr=3.37e-05
+epoch 1 step 1020/1500 loss=0.0012 elapsed=86.6min lr=3.30e-05
+epoch 1 step 1030/1500 loss=0.0017 elapsed=87.4min lr=3.23e-05
+epoch 1 step 1040/1500 loss=0.0017 elapsed=88.3min lr=3.16e-05
+epoch 1 step 1050/1500 loss=0.0020 elapsed=89.1min lr=3.09e-05
+epoch 1 step 1060/1500 loss=0.0016 elapsed=90.0min lr=3.02e-05
+epoch 1 step 1070/1500 loss=0.0015 elapsed=90.8min lr=2.96e-05
+epoch 1 step 1080/1500 loss=0.0012 elapsed=91.7min lr=2.89e-05
+epoch 1 step 1090/1500 loss=0.0022 elapsed=92.5min lr=2.82e-05
+epoch 1 step 1100/1500 loss=0.0021 elapsed=93.4min lr=2.75e-05
+epoch 1 step 1110/1500 loss=0.0016 elapsed=94.2min lr=2.68e-05
+epoch 1 step 1120/1500 loss=0.0022 elapsed=95.1min lr=2.61e-05
+epoch 1 step 1130/1500 loss=0.0016 elapsed=95.9min lr=2.54e-05
+epoch 1 step 1140/1500 loss=0.0015 elapsed=96.7min lr=2.47e-05
+epoch 1 step 1150/1500 loss=0.0018 elapsed=97.6min lr=2.41e-05
+epoch 1 step 1160/1500 loss=0.0026 elapsed=98.4min lr=2.34e-05
+epoch 1 step 1170/1500 loss=0.0017 elapsed=99.3min lr=2.27e-05
+epoch 1 step 1180/1500 loss=0.0028 elapsed=100.1min lr=2.20e-05
+epoch 1 step 1190/1500 loss=0.0019 elapsed=101.0min lr=2.13e-05
+epoch 1 step 1200/1500 loss=0.0015 elapsed=101.8min lr=2.06e-05
+Saving checkpoint at step 1200 -> trained_models\lora_checkpoint_partial
+epoch 1 step 1210/1500 loss=0.0017 elapsed=102.7min lr=1.99e-05
+epoch 1 step 1220/1500 loss=0.0014 elapsed=103.5min lr=1.92e-05
+epoch 1 step 1230/1500 loss=0.0016 elapsed=104.4min lr=1.86e-05
+epoch 1 step 1240/1500 loss=0.0011 elapsed=105.2min lr=1.79e-05
+epoch 1 step 1250/1500 loss=0.0009 elapsed=106.0min lr=1.72e-05
+epoch 1 step 1260/1500 loss=0.0017 elapsed=106.9min lr=1.65e-05
+epoch 1 step 1270/1500 loss=0.0013 elapsed=107.7min lr=1.58e-05
+epoch 1 step 1280/1500 loss=0.0018 elapsed=108.6min lr=1.51e-05
+epoch 1 step 1290/1500 loss=0.0012 elapsed=109.4min lr=1.44e-05
+epoch 1 step 1300/1500 loss=0.0012 elapsed=110.2min lr=1.37e-05
+epoch 1 step 1310/1500 loss=0.0017 elapsed=111.1min lr=1.31e-05
+epoch 1 step 1320/1500 loss=0.0016 elapsed=111.9min lr=1.24e-05
+epoch 1 step 1330/1500 loss=0.0014 elapsed=112.8min lr=1.17e-05
+epoch 1 step 1340/1500 loss=0.0010 elapsed=113.6min lr=1.10e-05
+epoch 1 step 1350/1500 loss=0.0018 elapsed=114.5min lr=1.03e-05
+epoch 1 step 1360/1500 loss=0.0027 elapsed=115.3min lr=9.62e-06
+epoch 1 step 1370/1500 loss=0.0013 elapsed=116.1min lr=8.93e-06
+epoch 1 step 1380/1500 loss=0.0010 elapsed=117.0min lr=8.25e-06
+epoch 1 step 1390/1500 loss=0.0011 elapsed=117.9min lr=7.56e-06
+epoch 1 step 1400/1500 loss=0.0016 elapsed=118.7min lr=6.87e-06
+Saving checkpoint at step 1400 -> trained_models\lora_checkpoint_partial
+epoch 1 step 1410/1500 loss=0.0013 elapsed=119.6min lr=6.19e-06
+epoch 1 step 1420/1500 loss=0.0019 elapsed=120.4min lr=5.50e-06
+epoch 1 step 1430/1500 loss=0.0013 elapsed=121.3min lr=4.81e-06
+epoch 1 step 1440/1500 loss=0.0009 elapsed=122.1min lr=4.12e-06
+epoch 1 step 1450/1500 loss=0.0018 elapsed=123.0min lr=3.44e-06
+epoch 1 step 1460/1500 loss=0.0008 elapsed=123.8min lr=2.75e-06
+epoch 1 step 1470/1500 loss=0.0016 elapsed=124.6min lr=2.06e-06
+epoch 1 step 1480/1500 loss=0.0015 elapsed=125.5min lr=1.37e-06
+epoch 1 step 1490/1500 loss=0.0011 elapsed=126.3min lr=6.87e-07
+epoch 1 step 1500/1500 loss=0.0015 elapsed=127.2min lr=0.00e+00
+
+Training complete. Saving final LoRA adapter -> trained_models\sailor2_malay_lemmatizer_lora_adapter
+Merging LoRA into base weights -> trained_models\sailor2_malay_lemmatizer
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|##########| 1/1 [00:03<00:00,  3.20s/it]Writing model shards: 100%|##########| 1/1 [00:03<00:00,  3.20s/it]
+Done.

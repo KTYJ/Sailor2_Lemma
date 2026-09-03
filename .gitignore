@@ -12,16 +12,13 @@ trained_models/
 *.pth
 
 # Large archives & raw dataset dumps (>100MB)
-CODE.zip
 *.zip
 *.parquet
-*siraplimau*
 
 # Python caches and logs
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
-*.log
 
 # IDE / OS files
 .vscode/

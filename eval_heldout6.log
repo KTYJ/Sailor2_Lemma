@@ -1,0 +1,165 @@
+Evaluating on 200 held-out sentences (of 1500 total)
+Loading tokenizer/model from ./trained_models/sailor2_malay_lemmatizer
+Loading weights:   0%|          | 0/387 [00:00<?, ?it/s]Loading weights: 100%|##########| 387/387 [00:00<00:00, 14332.35it/s]
+C:\Users\User\Desktop\NLP\.venv-1\Lib\site-packages\torch\cuda\__init__.py:287: UserWarning: 
+NVIDIA GeForce RTX 5090 with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 sm_75 sm_80 sm_86 sm_90 compute_37.
+If you want to use the NVIDIA GeForce RTX 5090 GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(
+Loaded in 2.8s on cuda:0
+  [25/200] running word-acc=88.5% elapsed=1.7min
+  [50/200] running word-acc=93.8% elapsed=3.4min
+  [75/200] running word-acc=92.3% elapsed=5.0min
+  [100/200] running word-acc=89.6% elapsed=6.9min
+  [125/200] running word-acc=89.6% elapsed=8.5min
+  [150/200] running word-acc=87.5% elapsed=10.4min
+  [175/200] running word-acc=85.5% elapsed=12.4min
+  [200/200] running word-acc=86.4% elapsed=14.5min
+
+======================================================================
+Held-out word-level lemma accuracy: 2646/3063 (86.4%)
+Unparseable model outputs: 11/200
+Exact token-count match (predicted vs gold list length): 187/200
+
+======================================================================
+QUALITATIVE EXAMPLES (first 8):
+
+---
+SENTENCE: Mudah-mudahan dengan idea ini, si kecil lebih mudah tidur pada waktu yang ditetapkan dan tidak lagi berjaga malam!
+score: 20/20
+  [OK] 'Mudah-mudahan'    gold='mudah'            pred='mudah'
+  [OK] 'dengan'           gold='dengan'           pred='dengan'
+  [OK] 'idea'             gold='idea'             pred='idea'
+  [OK] 'ini'              gold='ini'              pred='ini'
+  [OK] ','                gold=','                pred=','
+  [OK] 'si'               gold='si'               pred='si'
+  [OK] 'kecil'            gold='kecil'            pred='kecil'
+  [OK] 'lebih'            gold='lebih'            pred='lebih'
+  [OK] 'mudah'            gold='mudah'            pred='mudah'
+  [OK] 'tidur'            gold='tidur'            pred='tidur'
+  [OK] 'pada'             gold='pada'             pred='pada'
+  [OK] 'waktu'            gold='waktu'            pred='waktu'
+  [OK] 'yang'             gold='yang'             pred='yang'
+  [OK] 'ditetapkan'       gold='tetap'            pred='tetap'
+  [OK] 'dan'              gold='dan'              pred='dan'
+  [OK] 'tidak'            gold='tidak'            pred='tidak'
+  [OK] 'lagi'             gold='lagi'             pred='lagi'
+  [OK] 'berjaga'          gold='jaga'             pred='jaga'
+  [OK] 'malam'            gold='malam'            pred='malam'
+  [OK] '!'                gold='!'                pred='!'
+
+---
+SENTENCE: Inisiatif 2: Tak cukup dengan itu, anda juga wajib beramai-ramai menyertai Moreh Digital Mingguan Goodday di ERA IG Live pada setiap hari Jumaat, jam 10 malam bersama Personaliti ERA dan Ustaz Don Daniyal.
+score: 0/37
+  !! could not parse JSON: [{"surface": "Inisiatif", "lemma": "inisiatif"}, {"surface": "2", "lemma": "2"}, {"surface": ":", "lemma": ":"}, {"surface": "Tak", "lemma": "tak"}, {"surface": "cukup", "lemma": "cukup"}, {"surface": "dengan", "lemma": "dengan"}, {"surface": "itu", "lemma": "itu"}, {"surface": ",", "lemma": ","}, {"surface": "anda", "lemma": "anda"}, {"surface": "juga", "lemma": "juga"}, {"surface": "wajib", "lemma": "wajib"}, {"surface": "beramai-ramai", "lemma": "beramai-ramai"}, {"surface": "menyertai", "lem
+
+---
+SENTENCE: Tak salah nak masak sup sahaja, tetapi kalau asyik masak resipi sup yang sama sahaja pun boleh boring juga.
+score: 21/21
+  [OK] 'Tak'              gold='tak'              pred='tak'
+  [OK] 'salah'            gold='salah'            pred='salah'
+  [OK] 'nak'              gold='hendak'           pred='hendak'
+  [OK] 'masak'            gold='masak'            pred='masak'
+  [OK] 'sup'              gold='sup'              pred='sup'
+  [OK] 'sahaja'           gold='sahaja'           pred='sahaja'
+  [OK] ','                gold=','                pred=','
+  [OK] 'tetapi'           gold='tetapi'           pred='tetapi'
+  [OK] 'kalau'            gold='kalau'            pred='kalau'
+  [OK] 'asyik'            gold='asyik'            pred='asyik'
+  [OK] 'masak'            gold='masak'            pred='masak'
+  [OK] 'resipi'           gold='resipi'           pred='resipi'
+  [OK] 'sup'              gold='sup'              pred='sup'
+  [OK] 'yang'             gold='yang'             pred='yang'
+  [OK] 'sama'             gold='sama'             pred='sama'
+  [OK] 'sahaja'           gold='sahaja'           pred='sahaja'
+  [OK] 'pun'              gold='pun'              pred='pun'
+  [OK] 'boleh'            gold='boleh'            pred='boleh'
+  [OK] 'boring'           gold='boring'           pred='boring'
+  [OK] 'juga'             gold='juga'             pred='juga'
+  [OK] '.'                gold='.'                pred='.'
+
+---
+SENTENCE: Untuk pengetahuan anda, terdapat satu cara menggunakan teknik 'grounding' iaitu membiarkan anak bermain dengan tanah pada waktu siang.
+score: 22/22
+  [OK] 'Untuk'            gold='untuk'            pred='untuk'
+  [OK] 'pengetahuan'      gold='tahu'             pred='tahu'
+  [OK] 'anda'             gold='anda'             pred='anda'
+  [OK] ','                gold=','                pred=','
+  [OK] 'terdapat'         gold='dapat'            pred='dapat'
+  [OK] 'satu'             gold='satu'             pred='satu'
+  [OK] 'cara'             gold='cara'             pred='cara'
+  [OK] 'menggunakan'      gold='guna'             pred='guna'
+  [OK] 'teknik'           gold='teknik'           pred='teknik'
+  [OK] "'"                gold="'"                pred="'"
+  [OK] 'grounding'        gold='grounding'        pred='grounding'
+  [OK] "'"                gold="'"                pred="'"
+  [OK] 'iaitu'            gold='iaitu'            pred='iaitu'
+  [OK] 'membiarkan'       gold='biar'             pred='biar'
+  [OK] 'anak'             gold='anak'             pred='anak'
+  [OK] 'bermain'          gold='main'             pred='main'
+  [OK] 'dengan'           gold='dengan'           pred='dengan'
+  [OK] 'tanah'            gold='tanah'            pred='tanah'
+  [OK] 'pada'             gold='pada'             pred='pada'
+  [OK] 'waktu'            gold='waktu'            pred='waktu'
+  [OK] 'siang'            gold='siang'            pred='siang'
+  [OK] '.'                gold='.'                pred='.'
+
+---
+SENTENCE: Bila menjadi tu memang sedap dimakan!
+score: 7/7
+  [OK] 'Bila'             gold='bila'             pred='bila'
+  [OK] 'menjadi'          gold='jadi'             pred='jadi'
+  [OK] 'tu'               gold='itu'              pred='itu'
+  [OK] 'memang'           gold='memang'           pred='memang'
+  [OK] 'sedap'            gold='sedap'            pred='sedap'
+  [OK] 'dimakan'          gold='makan'            pred='makan'
+  [OK] '!'                gold='!'                pred='!'
+
+---
+SENTENCE: Nak simpan pun dah tak ada ruang.
+score: 8/8
+  [OK] 'Nak'              gold='hendak'           pred='hendak'
+  [OK] 'simpan'           gold='simpan'           pred='simpan'
+  [OK] 'pun'              gold='pun'              pred='pun'
+  [OK] 'dah'              gold='sudah'            pred='sudah'
+  [OK] 'tak'              gold='tak'              pred='tak'
+  [OK] 'ada'              gold='ada'              pred='ada'
+  [OK] 'ruang'            gold='ruang'            pred='ruang'
+  [OK] '.'                gold='.'                pred='.'
+
+---
+SENTENCE: Memang hotel ni belakang pintu masjid.
+score: 7/7
+  [OK] 'Memang'           gold='memang'           pred='memang'
+  [OK] 'hotel'            gold='hotel'            pred='hotel'
+  [OK] 'ni'               gold='ini'              pred='ini'
+  [OK] 'belakang'         gold='belakang'         pred='belakang'
+  [OK] 'pintu'            gold='pintu'            pred='pintu'
+  [OK] 'masjid'           gold='masjid'           pred='masjid'
+  [OK] '.'                gold='.'                pred='.'
+
+---
+SENTENCE: Ini bukan tentang melupakan apa yang berlaku tetapi lebih baik meneruskan dari kesakitan dan kesakitan yang kita alami.
+score: 19/19
+  [OK] 'Ini'              gold='ini'              pred='ini'
+  [OK] 'bukan'            gold='bukan'            pred='bukan'
+  [OK] 'tentang'          gold='tentang'          pred='tentang'
+  [OK] 'melupakan'        gold='lupa'             pred='lupa'
+  [OK] 'apa'              gold='apa'              pred='apa'
+  [OK] 'yang'             gold='yang'             pred='yang'
+  [OK] 'berlaku'          gold='laku'             pred='laku'
+  [OK] 'tetapi'           gold='tetapi'           pred='tetapi'
+  [OK] 'lebih'            gold='lebih'            pred='lebih'
+  [OK] 'baik'             gold='baik'             pred='baik'
+  [OK] 'meneruskan'       gold='terus'            pred='terus'
+  [OK] 'dari'             gold='dari'             pred='dari'
+  [OK] 'kesakitan'        gold='sakit'            pred='sakit'
+  [OK] 'dan'              gold='dan'              pred='dan'
+  [OK] 'kesakitan'        gold='sakit'            pred='sakit'
+  [OK] 'yang'             gold='yang'             pred='yang'
+  [OK] 'kita'             gold='kita'             pred='kita'
+  [OK] 'alami'            gold='alami'            pred='alami'
+  [OK] '.'                gold='.'                pred='.'
+
+Full results written to eval_lemmatizer_heldout_results.json

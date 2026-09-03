@@ -1,0 +1,50 @@
+Held-out sample: 150 sentences / 2418 gold tokens (seed=7, from cleaned\lemma_sft_eval.jsonl)
+
+=== identity ===
+  token_acc=0.782  lemma_acc=0.000  P/R/F1=0.000/0.000/0.000  cov=1.000  unparse=0.000  (0.0s)
+
+=== malaya_naive ===
+C:\Users\User\Desktop\NLP\.venv-1\Lib\site-packages\malaya\tokenizer.py:214: FutureWarning: Possible nested set at position 3397
+  self.tok = re.compile(r'({})'.format('|'.join(pipeline)))
+C:\Users\User\Desktop\NLP\.venv-1\Lib\site-packages\malaya\tokenizer.py:214: FutureWarning: Possible nested set at position 3927
+  self.tok = re.compile(r'({})'.format('|'.join(pipeline)))
+  token_acc=0.793  lemma_acc=0.557  P/R/F1=0.445/0.685/0.540  cov=1.000  unparse=0.000  (0.0s)
+
+=== sastrawi ===
+  token_acc=0.954  lemma_acc=0.788  P/R/F1=1.000/0.788/0.881  cov=1.000  unparse=0.000  (0.0s)
+
+=== stem_lstm_512 ===
+[stem_lstm_512] loading mesolitica/stem-lstm-512 via malaya.stem.huggingface ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+C:\Users\User\Desktop\NLP\.venv-1\Lib\site-packages\malaya\model\stem.py:28: FutureWarning: Possible nested set at position 3
+  or re.findall(_expressions['ic'], word.lower())
+  token_acc=0.906  lemma_acc=0.669  P/R/F1=0.827/0.696/0.756  cov=1.000  unparse=0.000  (10.6s)
+
+=== sailor2 ===
+[sailor2_ft] loading ./trained_models/sailor2_malay_lemmatizer ...
+Loading weights:   0%|          | 0/387 [00:00<?, ?it/s]Loading weights: 100%|##########| 387/387 [00:00<00:00, 16981.17it/s]
+[sailor2_ft] loaded in 3.0s on cuda:0
+[sailor2_ft] 25/150 (1.9 min)
+[sailor2_ft] 50/150 (7.8 min)
+[sailor2_ft] 75/150 (12.5 min)
+[sailor2_ft] 100/150 (18.2 min)
+[sailor2_ft] 125/150 (23.9 min)
+[sailor2_ft] 150/150 (30.7 min)
+  token_acc=0.869  lemma_acc=0.824  P/R/F1=0.960/0.829/0.890  cov=0.886  unparse=0.053  (1843.0s)
+
+
+==============================================================================
+COMPARISON  (n=150 sentences, 2418 gold tokens, seed=7)
+==============================================================================
+System                        TokAcc  LemAcc   Prec    Rec     F1    Cov  Unparse
+---------------------------------------------------------------------------------
+identity                       0.782   0.000  0.000  0.000  0.000  1.000    0.000
+malaya_naive                   0.793   0.557  0.445  0.685  0.540  1.000    0.000
+sastrawi                       0.954   0.788  1.000  0.788  0.881  1.000    0.000
+stem_lstm_512                  0.906   0.669  0.827  0.696  0.756  1.000    0.000
+sailor2_ft                     0.869   0.824  0.960  0.829  0.890  0.886    0.053
+
+TokAcc = exact lemma / all gold tokens   LemAcc = exact lemma / gold-transformed tokens
+Prec/Rec/F1 = detect-and-correct over transformed tokens   Cov = tokens predicted
+
+Written: comparison_results.json
