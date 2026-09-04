@@ -1,0 +1,4105 @@
+{
+  "meta": {
+    "n_sentences": 200,
+    "n_gold_tokens": 3170,
+    "seed": 7,
+    "eval_path": "cleaned\\lemma_sft_eval.jsonl",
+    "skipped": {}
+  },
+  "results": {
+    "identity": {
+      "n_sentences": 200,
+      "n_gold_tokens": 3170,
+      "token_accuracy": 0.785173501577287,
+      "lemma_accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "coverage": 1.0,
+      "unparseable_rate": 0.0,
+      "n_gold_transformed": 681,
+      "tp": 0,
+      "fp": 0,
+      "fn": 681,
+      "runtime_sec": 0.0
+    },
+    "malaya_naive": {
+      "n_sentences": 200,
+      "n_gold_tokens": 3170,
+      "token_accuracy": 0.7924290220820189,
+      "lemma_accuracy": 0.5653450807635829,
+      "precision": 0.4415137614678899,
+      "recall": 0.6924460431654677,
+      "f1": 0.5392156862745097,
+      "coverage": 1.0,
+      "unparseable_rate": 0.0,
+      "n_gold_transformed": 681,
+      "tp": 385,
+      "fp": 487,
+      "fn": 171,
+      "runtime_sec": 0.0
+    },
+    "sastrawi": {
+      "n_sentences": 200,
+      "n_gold_tokens": 3170,
+      "token_accuracy": 0.9558359621451105,
+      "lemma_accuracy": 0.7944199706314243,
+      "precision": 1.0,
+      "recall": 0.7944199706314243,
+      "f1": 0.8854337152209493,
+      "coverage": 1.0,
+      "unparseable_rate": 0.0,
+      "n_gold_transformed": 681,
+      "tp": 541,
+      "fp": 0,
+      "fn": 140,
+      "runtime_sec": 0.0
+    },
+    "stem_lstm_512": {
+      "n_sentences": 200,
+      "n_gold_tokens": 3170,
+      "token_accuracy": 0.9034700315457413,
+      "lemma_accuracy": 0.657856093979442,
+      "precision": 0.8028673835125448,
+      "recall": 0.6956521739130435,
+      "f1": 0.7454242928452579,
+      "coverage": 1.0,
+      "unparseable_rate": 0.0,
+      "n_gold_transformed": 681,
+      "tp": 448,
+      "fp": 110,
+      "fn": 196,
+      "runtime_sec": 12.6
+    },
+    "sailor2_ft": {
+      "n_sentences": 200,
+      "n_gold_tokens": 3170,
+      "token_accuracy": 0.8842271293375394,
+      "lemma_accuracy": 0.8502202643171806,
+      "precision": 0.9570247933884297,
+      "recall": 0.8539823008849557,
+      "f1": 0.9025720966484801,
+      "coverage": 0.9022082018927445,
+      "unparseable_rate": 0.045,
+      "n_gold_transformed": 681,
+      "tp": 579,
+      "fp": 26,
+      "fn": 99,
+      "runtime_sec": 963.4
+    },
+    "llama_ft": {
+      "n_sentences": 200,
+      "n_gold_tokens": 3170,
+      "token_accuracy": 0.8914826498422713,
+      "lemma_accuracy": 0.8751835535976505,
+      "precision": 0.9475357710651828,
+      "recall": 0.8895522388059701,
+      "f1": 0.9176289453425712,
+      "coverage": 0.9037854889589906,
+      "unparseable_rate": 0.045,
+      "n_gold_transformed": 681,
+      "tp": 596,
+      "fp": 33,
+      "fn": 74,
+      "runtime_sec": 794.9
+    }
+  },
+  "examples": {
+    "identity": [
+      {
+        "sentence": "Secara umumnya, di bawah ini adalah keadaan saf mengikut bilangan makmum dan jantinanya.",
+        "tokens": [
+          {
+            "surface": "Secara",
+            "gold": "cara",
+            "pred": "secara",
+            "ok": false
+          },
+          {
+            "surface": "umumnya",
+            "gold": "umum",
+            "pred": "umumnya",
+            "ok": false
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "di",
+            "gold": "di",
+            "pred": "di",
+            "ok": true
+          },
+          {
+            "surface": "bawah",
+            "gold": "bawah",
+            "pred": "bawah",
+            "ok": true
+          },
+          {
+            "surface": "ini",
+            "gold": "ini",
+            "pred": "ini",
+            "ok": true
+          },
+          {
+            "surface": "adalah",
+            "gold": "adalah",
+            "pred": "adalah",
+            "ok": true
+          },
+          {
+            "surface": "keadaan",
+            "gold": "ada",
+            "pred": "keadaan",
+            "ok": false
+          },
+          {
+            "surface": "saf",
+            "gold": "saf",
+            "pred": "saf",
+            "ok": true
+          },
+          {
+            "surface": "mengikut",
+            "gold": "ikut",
+            "pred": "mengikut",
+            "ok": false
+          },
+          {
+            "surface": "bilangan",
+            "gold": "bilang",
+            "pred": "bilangan",
+            "ok": false
+          },
+          {
+            "surface": "makmum",
+            "gold": "makmum",
+            "pred": "makmum",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "jantinanya",
+            "gold": "jantina",
+            "pred": "jantinanya",
+            "ok": false
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Duta lagi tu.",
+        "tokens": [
+          {
+            "surface": "Duta",
+            "gold": "duta",
+            "pred": "duta",
+            "ok": true
+          },
+          {
+            "surface": "lagi",
+            "gold": "lagi",
+            "pred": "lagi",
+            "ok": true
+          },
+          {
+            "surface": "tu",
+            "gold": "itu",
+            "pred": "tu",
+            "ok": false
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Esok pagi bangun terus minum.",
+        "tokens": [
+          {
+            "surface": "Esok",
+            "gold": "esok",
+            "pred": "esok",
+            "ok": true
+          },
+          {
+            "surface": "pagi",
+            "gold": "pagi",
+            "pred": "pagi",
+            "ok": true
+          },
+          {
+            "surface": "bangun",
+            "gold": "bangun",
+            "pred": "bangun",
+            "ok": true
+          },
+          {
+            "surface": "terus",
+            "gold": "terus",
+            "pred": "terus",
+            "ok": true
+          },
+          {
+            "surface": "minum",
+            "gold": "minum",
+            "pred": "minum",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Bila doh tadi dah terapung ke permukaan air, maknanya tepungnya dah cukup masak.",
+        "tokens": [
+          {
+            "surface": "Bila",
+            "gold": "bila",
+            "pred": "bila",
+            "ok": true
+          },
+          {
+            "surface": "doh",
+            "gold": "doh",
+            "pred": "doh",
+            "ok": true
+          },
+          {
+            "surface": "tadi",
+            "gold": "tadi",
+            "pred": "tadi",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "terapung",
+            "gold": "apung",
+            "pred": "terapung",
+            "ok": false
+          },
+          {
+            "surface": "ke",
+            "gold": "ke",
+            "pred": "ke",
+            "ok": true
+          },
+          {
+            "surface": "permukaan",
+            "gold": "muka",
+            "pred": "permukaan",
+            "ok": false
+          },
+          {
+            "surface": "air",
+            "gold": "air",
+            "pred": "air",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "maknanya",
+            "gold": "makna",
+            "pred": "maknanya",
+            "ok": false
+          },
+          {
+            "surface": "tepungnya",
+            "gold": "tepung",
+            "pred": "tepungnya",
+            "ok": false
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "cukup",
+            "gold": "cukup",
+            "pred": "cukup",
+            "ok": true
+          },
+          {
+            "surface": "masak",
+            "gold": "masak",
+            "pred": "masak",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Serius sedap, lagi-lagi kalau makan sejuk-sejuk masa baru keluar peti.",
+        "tokens": [
+          {
+            "surface": "Serius",
+            "gold": "serius",
+            "pred": "serius",
+            "ok": true
+          },
+          {
+            "surface": "sedap",
+            "gold": "sedap",
+            "pred": "sedap",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "lagi-lagi",
+            "gold": "lagi",
+            "pred": "lagi-lagi",
+            "ok": false
+          },
+          {
+            "surface": "kalau",
+            "gold": "kalau",
+            "pred": "kalau",
+            "ok": true
+          },
+          {
+            "surface": "makan",
+            "gold": "makan",
+            "pred": "makan",
+            "ok": true
+          },
+          {
+            "surface": "sejuk-sejuk",
+            "gold": "sejuk",
+            "pred": "sejuk-sejuk",
+            "ok": false
+          },
+          {
+            "surface": "masa",
+            "gold": "masa",
+            "pred": "masa",
+            "ok": true
+          },
+          {
+            "surface": "baru",
+            "gold": "baru",
+            "pred": "baru",
+            "ok": true
+          },
+          {
+            "surface": "keluar",
+            "gold": "keluar",
+            "pred": "keluar",
+            "ok": true
+          },
+          {
+            "surface": "peti",
+            "gold": "peti",
+            "pred": "peti",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Bila mesin dah bergerak, isi air hingga tub hampir penuh dan masukkan CUKA + SODA BIKARBONAT.",
+        "tokens": [
+          {
+            "surface": "Bila",
+            "gold": "bila",
+            "pred": "bila",
+            "ok": true
+          },
+          {
+            "surface": "mesin",
+            "gold": "mesin",
+            "pred": "mesin",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "bergerak",
+            "gold": "gerak",
+            "pred": "bergerak",
+            "ok": false
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "isi",
+            "gold": "isi",
+            "pred": "isi",
+            "ok": true
+          },
+          {
+            "surface": "air",
+            "gold": "air",
+            "pred": "air",
+            "ok": true
+          },
+          {
+            "surface": "hingga",
+            "gold": "hingga",
+            "pred": "hingga",
+            "ok": true
+          },
+          {
+            "surface": "tub",
+            "gold": "tub",
+            "pred": "tub",
+            "ok": true
+          },
+          {
+            "surface": "hampir",
+            "gold": "hampir",
+            "pred": "hampir",
+            "ok": true
+          },
+          {
+            "surface": "penuh",
+            "gold": "penuh",
+            "pred": "penuh",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "masukkan",
+            "gold": "masuk",
+            "pred": "masukkan",
+            "ok": false
+          },
+          {
+            "surface": "CUKA",
+            "gold": "cuka",
+            "pred": "cuka",
+            "ok": true
+          },
+          {
+            "surface": "+",
+            "gold": "+",
+            "pred": "+",
+            "ok": true
+          },
+          {
+            "surface": "SODA",
+            "gold": "soda",
+            "pred": "soda",
+            "ok": true
+          },
+          {
+            "surface": "BIKARBONAT",
+            "gold": "bikarbonat",
+            "pred": "bikarbonat",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Nak pilih mainan untuk anak yang dah tahu bercakap mungkin agak mudah sebab mereka biasanya pandai meminta dan menunjukkan minat masing-masing.",
+        "tokens": [
+          {
+            "surface": "Nak",
+            "gold": "hendak",
+            "pred": "nak",
+            "ok": false
+          },
+          {
+            "surface": "pilih",
+            "gold": "pilih",
+            "pred": "pilih",
+            "ok": true
+          },
+          {
+            "surface": "mainan",
+            "gold": "main",
+            "pred": "mainan",
+            "ok": false
+          },
+          {
+            "surface": "untuk",
+            "gold": "untuk",
+            "pred": "untuk",
+            "ok": true
+          },
+          {
+            "surface": "anak",
+            "gold": "anak",
+            "pred": "anak",
+            "ok": true
+          },
+          {
+            "surface": "yang",
+            "gold": "yang",
+            "pred": "yang",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "tahu",
+            "gold": "tahu",
+            "pred": "tahu",
+            "ok": true
+          },
+          {
+            "surface": "bercakap",
+            "gold": "cakap",
+            "pred": "bercakap",
+            "ok": false
+          },
+          {
+            "surface": "mungkin",
+            "gold": "mungkin",
+            "pred": "mungkin",
+            "ok": true
+          },
+          {
+            "surface": "agak",
+            "gold": "agak",
+            "pred": "agak",
+            "ok": true
+          },
+          {
+            "surface": "mudah",
+            "gold": "mudah",
+            "pred": "mudah",
+            "ok": true
+          },
+          {
+            "surface": "sebab",
+            "gold": "sebab",
+            "pred": "sebab",
+            "ok": true
+          },
+          {
+            "surface": "mereka",
+            "gold": "mereka",
+            "pred": "mereka",
+            "ok": true
+          },
+          {
+            "surface": "biasanya",
+            "gold": "biasa",
+            "pred": "biasanya",
+            "ok": false
+          },
+          {
+            "surface": "pandai",
+            "gold": "pandai",
+            "pred": "pandai",
+            "ok": true
+          },
+          {
+            "surface": "meminta",
+            "gold": "minta",
+            "pred": "meminta",
+            "ok": false
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "menunjukkan",
+            "gold": "tunjuk",
+            "pred": "menunjukkan",
+            "ok": false
+          },
+          {
+            "surface": "minat",
+            "gold": "minat",
+            "pred": "minat",
+            "ok": true
+          },
+          {
+            "surface": "masing-masing",
+            "gold": "masing-masing",
+            "pred": "masing-masing",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "- Anak-anak sering menyebut atau menceritakan apa saja kebaikan ibu bapa.",
+        "tokens": [
+          {
+            "surface": "-",
+            "gold": "-",
+            "pred": "-",
+            "ok": true
+          },
+          {
+            "surface": "Anak-anak",
+            "gold": "anak",
+            "pred": "anak-anak",
+            "ok": false
+          },
+          {
+            "surface": "sering",
+            "gold": "sering",
+            "pred": "sering",
+            "ok": true
+          },
+          {
+            "surface": "menyebut",
+            "gold": "sebut",
+            "pred": "menyebut",
+            "ok": false
+          },
+          {
+            "surface": "atau",
+            "gold": "atau",
+            "pred": "atau",
+            "ok": true
+          },
+          {
+            "surface": "menceritakan",
+            "gold": "cerita",
+            "pred": "menceritakan",
+            "ok": false
+          },
+          {
+            "surface": "apa",
+            "gold": "apa",
+            "pred": "apa",
+            "ok": true
+          },
+          {
+            "surface": "saja",
+            "gold": "saja",
+            "pred": "saja",
+            "ok": true
+          },
+          {
+            "surface": "kebaikan",
+            "gold": "baik",
+            "pred": "kebaikan",
+            "ok": false
+          },
+          {
+            "surface": "ibu",
+            "gold": "ibu",
+            "pred": "ibu",
+            "ok": true
+          },
+          {
+            "surface": "bapa",
+            "gold": "bapa",
+            "pred": "bapa",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      }
+    ],
+    "malaya_naive": [
+      {
+        "sentence": "Secara umumnya, di bawah ini adalah keadaan saf mengikut bilangan makmum dan jantinanya.",
+        "tokens": [
+          {
+            "surface": "Secara",
+            "gold": "cara",
+            "pred": "cara",
+            "ok": true
+          },
+          {
+            "surface": "umumnya",
+            "gold": "umum",
+            "pred": "umum",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "di",
+            "gold": "di",
+            "pred": "di",
+            "ok": true
+          },
+          {
+            "surface": "bawah",
+            "gold": "bawah",
+            "pred": "bawah",
+            "ok": true
+          },
+          {
+            "surface": "ini",
+            "gold": "ini",
+            "pred": "ini",
+            "ok": true
+          },
+          {
+            "surface": "adalah",
+            "gold": "adalah",
+            "pred": "ada",
+            "ok": false
+          },
+          {
+            "surface": "keadaan",
+            "gold": "ada",
+            "pred": "ada",
+            "ok": true
+          },
+          {
+            "surface": "saf",
+            "gold": "saf",
+            "pred": "saf",
+            "ok": true
+          },
+          {
+            "surface": "mengikut",
+            "gold": "ikut",
+            "pred": "ikut",
+            "ok": true
+          },
+          {
+            "surface": "bilangan",
+            "gold": "bilang",
+            "pred": "bilang",
+            "ok": true
+          },
+          {
+            "surface": "makmum",
+            "gold": "makmum",
+            "pred": "makmum",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "jantinanya",
+            "gold": "jantina",
+            "pred": "jantina",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Duta lagi tu.",
+        "tokens": [
+          {
+            "surface": "Duta",
+            "gold": "duta",
+            "pred": "duta",
+            "ok": true
+          },
+          {
+            "surface": "lagi",
+            "gold": "lagi",
+            "pred": "lagi",
+            "ok": true
+          },
+          {
+            "surface": "tu",
+            "gold": "itu",
+            "pred": "tu",
+            "ok": false
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Esok pagi bangun terus minum.",
+        "tokens": [
+          {
+            "surface": "Esok",
+            "gold": "esok",
+            "pred": "esok",
+            "ok": true
+          },
+          {
+            "surface": "pagi",
+            "gold": "pagi",
+            "pred": "pagi",
+            "ok": true
+          },
+          {
+            "surface": "bangun",
+            "gold": "bangun",
+            "pred": "bangun",
+            "ok": true
+          },
+          {
+            "surface": "terus",
+            "gold": "terus",
+            "pred": "us",
+            "ok": false
+          },
+          {
+            "surface": "minum",
+            "gold": "minum",
+            "pred": "minum",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Bila doh tadi dah terapung ke permukaan air, maknanya tepungnya dah cukup masak.",
+        "tokens": [
+          {
+            "surface": "Bila",
+            "gold": "bila",
+            "pred": "bila",
+            "ok": true
+          },
+          {
+            "surface": "doh",
+            "gold": "doh",
+            "pred": "doh",
+            "ok": true
+          },
+          {
+            "surface": "tadi",
+            "gold": "tadi",
+            "pred": "tadi",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "terapung",
+            "gold": "apung",
+            "pred": "apung",
+            "ok": true
+          },
+          {
+            "surface": "ke",
+            "gold": "ke",
+            "pred": "ke",
+            "ok": true
+          },
+          {
+            "surface": "permukaan",
+            "gold": "muka",
+            "pred": "muk",
+            "ok": false
+          },
+          {
+            "surface": "air",
+            "gold": "air",
+            "pred": "air",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "maknanya",
+            "gold": "makna",
+            "pred": "makna",
+            "ok": true
+          },
+          {
+            "surface": "tepungnya",
+            "gold": "tepung",
+            "pred": "tepung",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "cukup",
+            "gold": "cukup",
+            "pred": "cukup",
+            "ok": true
+          },
+          {
+            "surface": "masak",
+            "gold": "masak",
+            "pred": "masak",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Serius sedap, lagi-lagi kalau makan sejuk-sejuk masa baru keluar peti.",
+        "tokens": [
+          {
+            "surface": "Serius",
+            "gold": "serius",
+            "pred": "rius",
+            "ok": false
+          },
+          {
+            "surface": "sedap",
+            "gold": "sedap",
+            "pred": "dap",
+            "ok": false
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "lagi-lagi",
+            "gold": "lagi",
+            "pred": "lagi-lagi",
+            "ok": false
+          },
+          {
+            "surface": "kalau",
+            "gold": "kalau",
+            "pred": "kalau",
+            "ok": true
+          },
+          {
+            "surface": "makan",
+            "gold": "makan",
+            "pred": "ma",
+            "ok": false
+          },
+          {
+            "surface": "sejuk-sejuk",
+            "gold": "sejuk",
+            "pred": "juk-sejuk",
+            "ok": false
+          },
+          {
+            "surface": "masa",
+            "gold": "masa",
+            "pred": "masa",
+            "ok": true
+          },
+          {
+            "surface": "baru",
+            "gold": "baru",
+            "pred": "baru",
+            "ok": true
+          },
+          {
+            "surface": "keluar",
+            "gold": "keluar",
+            "pred": "luar",
+            "ok": false
+          },
+          {
+            "surface": "peti",
+            "gold": "peti",
+            "pred": "ti",
+            "ok": false
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Bila mesin dah bergerak, isi air hingga tub hampir penuh dan masukkan CUKA + SODA BIKARBONAT.",
+        "tokens": [
+          {
+            "surface": "Bila",
+            "gold": "bila",
+            "pred": "bila",
+            "ok": true
+          },
+          {
+            "surface": "mesin",
+            "gold": "mesin",
+            "pred": "sin",
+            "ok": false
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "bergerak",
+            "gold": "gerak",
+            "pred": "gerak",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "isi",
+            "gold": "isi",
+            "pred": "isi",
+            "ok": true
+          },
+          {
+            "surface": "air",
+            "gold": "air",
+            "pred": "air",
+            "ok": true
+          },
+          {
+            "surface": "hingga",
+            "gold": "hingga",
+            "pred": "hingga",
+            "ok": true
+          },
+          {
+            "surface": "tub",
+            "gold": "tub",
+            "pred": "tub",
+            "ok": true
+          },
+          {
+            "surface": "hampir",
+            "gold": "hampir",
+            "pred": "hampir",
+            "ok": true
+          },
+          {
+            "surface": "penuh",
+            "gold": "penuh",
+            "pred": "uh",
+            "ok": false
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "masukkan",
+            "gold": "masuk",
+            "pred": "masuk",
+            "ok": true
+          },
+          {
+            "surface": "CUKA",
+            "gold": "cuka",
+            "pred": "cuka",
+            "ok": true
+          },
+          {
+            "surface": "+",
+            "gold": "+",
+            "pred": "+",
+            "ok": true
+          },
+          {
+            "surface": "SODA",
+            "gold": "soda",
+            "pred": "soda",
+            "ok": true
+          },
+          {
+            "surface": "BIKARBONAT",
+            "gold": "bikarbonat",
+            "pred": "bikarbonat",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Nak pilih mainan untuk anak yang dah tahu bercakap mungkin agak mudah sebab mereka biasanya pandai meminta dan menunjukkan minat masing-masing.",
+        "tokens": [
+          {
+            "surface": "Nak",
+            "gold": "hendak",
+            "pred": "nak",
+            "ok": false
+          },
+          {
+            "surface": "pilih",
+            "gold": "pilih",
+            "pred": "pilih",
+            "ok": true
+          },
+          {
+            "surface": "mainan",
+            "gold": "main",
+            "pred": "mainan",
+            "ok": false
+          },
+          {
+            "surface": "untuk",
+            "gold": "untuk",
+            "pred": "untuk",
+            "ok": true
+          },
+          {
+            "surface": "anak",
+            "gold": "anak",
+            "pred": "anak",
+            "ok": true
+          },
+          {
+            "surface": "yang",
+            "gold": "yang",
+            "pred": "yang",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "tahu",
+            "gold": "tahu",
+            "pred": "tahu",
+            "ok": true
+          },
+          {
+            "surface": "bercakap",
+            "gold": "cakap",
+            "pred": "cakap",
+            "ok": true
+          },
+          {
+            "surface": "mungkin",
+            "gold": "mungkin",
+            "pred": "mungkin",
+            "ok": true
+          },
+          {
+            "surface": "agak",
+            "gold": "agak",
+            "pred": "agak",
+            "ok": true
+          },
+          {
+            "surface": "mudah",
+            "gold": "mudah",
+            "pred": "mudah",
+            "ok": true
+          },
+          {
+            "surface": "sebab",
+            "gold": "sebab",
+            "pred": "bab",
+            "ok": false
+          },
+          {
+            "surface": "mereka",
+            "gold": "mereka",
+            "pred": "reka",
+            "ok": false
+          },
+          {
+            "surface": "biasanya",
+            "gold": "biasa",
+            "pred": "biasa",
+            "ok": true
+          },
+          {
+            "surface": "pandai",
+            "gold": "pandai",
+            "pred": "pandai",
+            "ok": true
+          },
+          {
+            "surface": "meminta",
+            "gold": "minta",
+            "pred": "inta",
+            "ok": false
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "menunjukkan",
+            "gold": "tunjuk",
+            "pred": "unjuk",
+            "ok": false
+          },
+          {
+            "surface": "minat",
+            "gold": "minat",
+            "pred": "minat",
+            "ok": true
+          },
+          {
+            "surface": "masing-masing",
+            "gold": "masing-masing",
+            "pred": "masing-masing",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "- Anak-anak sering menyebut atau menceritakan apa saja kebaikan ibu bapa.",
+        "tokens": [
+          {
+            "surface": "-",
+            "gold": "-",
+            "pred": "-",
+            "ok": true
+          },
+          {
+            "surface": "Anak-anak",
+            "gold": "anak",
+            "pred": "anak-anak",
+            "ok": false
+          },
+          {
+            "surface": "sering",
+            "gold": "sering",
+            "pred": "ring",
+            "ok": false
+          },
+          {
+            "surface": "menyebut",
+            "gold": "sebut",
+            "pred": "yebut",
+            "ok": false
+          },
+          {
+            "surface": "atau",
+            "gold": "atau",
+            "pred": "atau",
+            "ok": true
+          },
+          {
+            "surface": "menceritakan",
+            "gold": "cerita",
+            "pred": "cerita",
+            "ok": true
+          },
+          {
+            "surface": "apa",
+            "gold": "apa",
+            "pred": "apa",
+            "ok": true
+          },
+          {
+            "surface": "saja",
+            "gold": "saja",
+            "pred": "saja",
+            "ok": true
+          },
+          {
+            "surface": "kebaikan",
+            "gold": "baik",
+            "pred": "bai",
+            "ok": false
+          },
+          {
+            "surface": "ibu",
+            "gold": "ibu",
+            "pred": "ibu",
+            "ok": true
+          },
+          {
+            "surface": "bapa",
+            "gold": "bapa",
+            "pred": "bapa",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      }
+    ],
+    "sastrawi": [
+      {
+        "sentence": "Secara umumnya, di bawah ini adalah keadaan saf mengikut bilangan makmum dan jantinanya.",
+        "tokens": [
+          {
+            "surface": "Secara",
+            "gold": "cara",
+            "pred": "cara",
+            "ok": true
+          },
+          {
+            "surface": "umumnya",
+            "gold": "umum",
+            "pred": "umum",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "di",
+            "gold": "di",
+            "pred": "di",
+            "ok": true
+          },
+          {
+            "surface": "bawah",
+            "gold": "bawah",
+            "pred": "bawah",
+            "ok": true
+          },
+          {
+            "surface": "ini",
+            "gold": "ini",
+            "pred": "ini",
+            "ok": true
+          },
+          {
+            "surface": "adalah",
+            "gold": "adalah",
+            "pred": "adalah",
+            "ok": true
+          },
+          {
+            "surface": "keadaan",
+            "gold": "ada",
+            "pred": "ada",
+            "ok": true
+          },
+          {
+            "surface": "saf",
+            "gold": "saf",
+            "pred": "saf",
+            "ok": true
+          },
+          {
+            "surface": "mengikut",
+            "gold": "ikut",
+            "pred": "ikut",
+            "ok": true
+          },
+          {
+            "surface": "bilangan",
+            "gold": "bilang",
+            "pred": "bilang",
+            "ok": true
+          },
+          {
+            "surface": "makmum",
+            "gold": "makmum",
+            "pred": "makmum",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "jantinanya",
+            "gold": "jantina",
+            "pred": "jantina",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Duta lagi tu.",
+        "tokens": [
+          {
+            "surface": "Duta",
+            "gold": "duta",
+            "pred": "duta",
+            "ok": true
+          },
+          {
+            "surface": "lagi",
+            "gold": "lagi",
+            "pred": "lagi",
+            "ok": true
+          },
+          {
+            "surface": "tu",
+            "gold": "itu",
+            "pred": "tu",
+            "ok": false
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Esok pagi bangun terus minum.",
+        "tokens": [
+          {
+            "surface": "Esok",
+            "gold": "esok",
+            "pred": "esok",
+            "ok": true
+          },
+          {
+            "surface": "pagi",
+            "gold": "pagi",
+            "pred": "pagi",
+            "ok": true
+          },
+          {
+            "surface": "bangun",
+            "gold": "bangun",
+            "pred": "bangun",
+            "ok": true
+          },
+          {
+            "surface": "terus",
+            "gold": "terus",
+            "pred": "terus",
+            "ok": true
+          },
+          {
+            "surface": "minum",
+            "gold": "minum",
+            "pred": "minum",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Bila doh tadi dah terapung ke permukaan air, maknanya tepungnya dah cukup masak.",
+        "tokens": [
+          {
+            "surface": "Bila",
+            "gold": "bila",
+            "pred": "bila",
+            "ok": true
+          },
+          {
+            "surface": "doh",
+            "gold": "doh",
+            "pred": "doh",
+            "ok": true
+          },
+          {
+            "surface": "tadi",
+            "gold": "tadi",
+            "pred": "tadi",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "terapung",
+            "gold": "apung",
+            "pred": "apung",
+            "ok": true
+          },
+          {
+            "surface": "ke",
+            "gold": "ke",
+            "pred": "ke",
+            "ok": true
+          },
+          {
+            "surface": "permukaan",
+            "gold": "muka",
+            "pred": "muka",
+            "ok": true
+          },
+          {
+            "surface": "air",
+            "gold": "air",
+            "pred": "air",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "maknanya",
+            "gold": "makna",
+            "pred": "makna",
+            "ok": true
+          },
+          {
+            "surface": "tepungnya",
+            "gold": "tepung",
+            "pred": "tepung",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "cukup",
+            "gold": "cukup",
+            "pred": "cukup",
+            "ok": true
+          },
+          {
+            "surface": "masak",
+            "gold": "masak",
+            "pred": "masak",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Serius sedap, lagi-lagi kalau makan sejuk-sejuk masa baru keluar peti.",
+        "tokens": [
+          {
+            "surface": "Serius",
+            "gold": "serius",
+            "pred": "serius",
+            "ok": true
+          },
+          {
+            "surface": "sedap",
+            "gold": "sedap",
+            "pred": "sedap",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "lagi-lagi",
+            "gold": "lagi",
+            "pred": "lagi",
+            "ok": true
+          },
+          {
+            "surface": "kalau",
+            "gold": "kalau",
+            "pred": "kalau",
+            "ok": true
+          },
+          {
+            "surface": "makan",
+            "gold": "makan",
+            "pred": "makan",
+            "ok": true
+          },
+          {
+            "surface": "sejuk-sejuk",
+            "gold": "sejuk",
+            "pred": "sejuk",
+            "ok": true
+          },
+          {
+            "surface": "masa",
+            "gold": "masa",
+            "pred": "masa",
+            "ok": true
+          },
+          {
+            "surface": "baru",
+            "gold": "baru",
+            "pred": "baru",
+            "ok": true
+          },
+          {
+            "surface": "keluar",
+            "gold": "keluar",
+            "pred": "keluar",
+            "ok": true
+          },
+          {
+            "surface": "peti",
+            "gold": "peti",
+            "pred": "peti",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Bila mesin dah bergerak, isi air hingga tub hampir penuh dan masukkan CUKA + SODA BIKARBONAT.",
+        "tokens": [
+          {
+            "surface": "Bila",
+            "gold": "bila",
+            "pred": "bila",
+            "ok": true
+          },
+          {
+            "surface": "mesin",
+            "gold": "mesin",
+            "pred": "mesin",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "bergerak",
+            "gold": "gerak",
+            "pred": "gerak",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "isi",
+            "gold": "isi",
+            "pred": "isi",
+            "ok": true
+          },
+          {
+            "surface": "air",
+            "gold": "air",
+            "pred": "air",
+            "ok": true
+          },
+          {
+            "surface": "hingga",
+            "gold": "hingga",
+            "pred": "hingga",
+            "ok": true
+          },
+          {
+            "surface": "tub",
+            "gold": "tub",
+            "pred": "tub",
+            "ok": true
+          },
+          {
+            "surface": "hampir",
+            "gold": "hampir",
+            "pred": "hampir",
+            "ok": true
+          },
+          {
+            "surface": "penuh",
+            "gold": "penuh",
+            "pred": "penuh",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "masukkan",
+            "gold": "masuk",
+            "pred": "masuk",
+            "ok": true
+          },
+          {
+            "surface": "CUKA",
+            "gold": "cuka",
+            "pred": "cuka",
+            "ok": true
+          },
+          {
+            "surface": "+",
+            "gold": "+",
+            "pred": "+",
+            "ok": true
+          },
+          {
+            "surface": "SODA",
+            "gold": "soda",
+            "pred": "soda",
+            "ok": true
+          },
+          {
+            "surface": "BIKARBONAT",
+            "gold": "bikarbonat",
+            "pred": "bikarbonat",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Nak pilih mainan untuk anak yang dah tahu bercakap mungkin agak mudah sebab mereka biasanya pandai meminta dan menunjukkan minat masing-masing.",
+        "tokens": [
+          {
+            "surface": "Nak",
+            "gold": "hendak",
+            "pred": "nak",
+            "ok": false
+          },
+          {
+            "surface": "pilih",
+            "gold": "pilih",
+            "pred": "pilih",
+            "ok": true
+          },
+          {
+            "surface": "mainan",
+            "gold": "main",
+            "pred": "mainan",
+            "ok": false
+          },
+          {
+            "surface": "untuk",
+            "gold": "untuk",
+            "pred": "untuk",
+            "ok": true
+          },
+          {
+            "surface": "anak",
+            "gold": "anak",
+            "pred": "anak",
+            "ok": true
+          },
+          {
+            "surface": "yang",
+            "gold": "yang",
+            "pred": "yang",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "tahu",
+            "gold": "tahu",
+            "pred": "tahu",
+            "ok": true
+          },
+          {
+            "surface": "bercakap",
+            "gold": "cakap",
+            "pred": "cakap",
+            "ok": true
+          },
+          {
+            "surface": "mungkin",
+            "gold": "mungkin",
+            "pred": "mungkin",
+            "ok": true
+          },
+          {
+            "surface": "agak",
+            "gold": "agak",
+            "pred": "agak",
+            "ok": true
+          },
+          {
+            "surface": "mudah",
+            "gold": "mudah",
+            "pred": "mudah",
+            "ok": true
+          },
+          {
+            "surface": "sebab",
+            "gold": "sebab",
+            "pred": "sebab",
+            "ok": true
+          },
+          {
+            "surface": "mereka",
+            "gold": "mereka",
+            "pred": "mereka",
+            "ok": true
+          },
+          {
+            "surface": "biasanya",
+            "gold": "biasa",
+            "pred": "biasa",
+            "ok": true
+          },
+          {
+            "surface": "pandai",
+            "gold": "pandai",
+            "pred": "pandai",
+            "ok": true
+          },
+          {
+            "surface": "meminta",
+            "gold": "minta",
+            "pred": "minta",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "menunjukkan",
+            "gold": "tunjuk",
+            "pred": "tunjuk",
+            "ok": true
+          },
+          {
+            "surface": "minat",
+            "gold": "minat",
+            "pred": "minat",
+            "ok": true
+          },
+          {
+            "surface": "masing-masing",
+            "gold": "masing-masing",
+            "pred": "masing-masing",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "- Anak-anak sering menyebut atau menceritakan apa saja kebaikan ibu bapa.",
+        "tokens": [
+          {
+            "surface": "-",
+            "gold": "-",
+            "pred": "-",
+            "ok": true
+          },
+          {
+            "surface": "Anak-anak",
+            "gold": "anak",
+            "pred": "anak",
+            "ok": true
+          },
+          {
+            "surface": "sering",
+            "gold": "sering",
+            "pred": "sering",
+            "ok": true
+          },
+          {
+            "surface": "menyebut",
+            "gold": "sebut",
+            "pred": "sebut",
+            "ok": true
+          },
+          {
+            "surface": "atau",
+            "gold": "atau",
+            "pred": "atau",
+            "ok": true
+          },
+          {
+            "surface": "menceritakan",
+            "gold": "cerita",
+            "pred": "cerita",
+            "ok": true
+          },
+          {
+            "surface": "apa",
+            "gold": "apa",
+            "pred": "apa",
+            "ok": true
+          },
+          {
+            "surface": "saja",
+            "gold": "saja",
+            "pred": "saja",
+            "ok": true
+          },
+          {
+            "surface": "kebaikan",
+            "gold": "baik",
+            "pred": "baik",
+            "ok": true
+          },
+          {
+            "surface": "ibu",
+            "gold": "ibu",
+            "pred": "ibu",
+            "ok": true
+          },
+          {
+            "surface": "bapa",
+            "gold": "bapa",
+            "pred": "bapa",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      }
+    ],
+    "stem_lstm_512": [
+      {
+        "sentence": "Secara umumnya, di bawah ini adalah keadaan saf mengikut bilangan makmum dan jantinanya.",
+        "tokens": [
+          {
+            "surface": "Secara",
+            "gold": "cara",
+            "pred": "secara",
+            "ok": false
+          },
+          {
+            "surface": "umumnya",
+            "gold": "umum",
+            "pred": "umum",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "di",
+            "gold": "di",
+            "pred": "k",
+            "ok": false
+          },
+          {
+            "surface": "bawah",
+            "gold": "bawah",
+            "pred": "bawah",
+            "ok": true
+          },
+          {
+            "surface": "ini",
+            "gold": "ini",
+            "pred": "ini",
+            "ok": true
+          },
+          {
+            "surface": "adalah",
+            "gold": "adalah",
+            "pred": "adalah",
+            "ok": true
+          },
+          {
+            "surface": "keadaan",
+            "gold": "ada",
+            "pred": "ada",
+            "ok": true
+          },
+          {
+            "surface": "saf",
+            "gold": "saf",
+            "pred": "saf",
+            "ok": true
+          },
+          {
+            "surface": "mengikut",
+            "gold": "ikut",
+            "pred": "ikut",
+            "ok": true
+          },
+          {
+            "surface": "bilangan",
+            "gold": "bilang",
+            "pred": "bilang",
+            "ok": true
+          },
+          {
+            "surface": "makmum",
+            "gold": "makmum",
+            "pred": "makmum",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "jantinanya",
+            "gold": "jantina",
+            "pred": "jantina",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Duta lagi tu.",
+        "tokens": [
+          {
+            "surface": "Duta",
+            "gold": "duta",
+            "pred": "duta",
+            "ok": true
+          },
+          {
+            "surface": "lagi",
+            "gold": "lagi",
+            "pred": "lagi",
+            "ok": true
+          },
+          {
+            "surface": "tu",
+            "gold": "itu",
+            "pred": "tu",
+            "ok": false
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Esok pagi bangun terus minum.",
+        "tokens": [
+          {
+            "surface": "Esok",
+            "gold": "esok",
+            "pred": "esok",
+            "ok": true
+          },
+          {
+            "surface": "pagi",
+            "gold": "pagi",
+            "pred": "pagi",
+            "ok": true
+          },
+          {
+            "surface": "bangun",
+            "gold": "bangun",
+            "pred": "bangun",
+            "ok": true
+          },
+          {
+            "surface": "terus",
+            "gold": "terus",
+            "pred": "terus",
+            "ok": true
+          },
+          {
+            "surface": "minum",
+            "gold": "minum",
+            "pred": "minum",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Bila doh tadi dah terapung ke permukaan air, maknanya tepungnya dah cukup masak.",
+        "tokens": [
+          {
+            "surface": "Bila",
+            "gold": "bila",
+            "pred": "bila",
+            "ok": true
+          },
+          {
+            "surface": "doh",
+            "gold": "doh",
+            "pred": "doh",
+            "ok": true
+          },
+          {
+            "surface": "tadi",
+            "gold": "tadi",
+            "pred": "tadi",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "terapung",
+            "gold": "apung",
+            "pred": "apung",
+            "ok": true
+          },
+          {
+            "surface": "ke",
+            "gold": "ke",
+            "pred": "ke",
+            "ok": true
+          },
+          {
+            "surface": "permukaan",
+            "gold": "muka",
+            "pred": "permukaan",
+            "ok": false
+          },
+          {
+            "surface": "air",
+            "gold": "air",
+            "pred": "air",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "maknanya",
+            "gold": "makna",
+            "pred": "makna",
+            "ok": true
+          },
+          {
+            "surface": "tepungnya",
+            "gold": "tepung",
+            "pred": "tepung",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "cukup",
+            "gold": "cukup",
+            "pred": "cukup",
+            "ok": true
+          },
+          {
+            "surface": "masak",
+            "gold": "masak",
+            "pred": "masak",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Serius sedap, lagi-lagi kalau makan sejuk-sejuk masa baru keluar peti.",
+        "tokens": [
+          {
+            "surface": "Serius",
+            "gold": "serius",
+            "pred": "serius",
+            "ok": true
+          },
+          {
+            "surface": "sedap",
+            "gold": "sedap",
+            "pred": "sedap",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "lagi-lagi",
+            "gold": "lagi",
+            "pred": "lagi",
+            "ok": true
+          },
+          {
+            "surface": "kalau",
+            "gold": "kalau",
+            "pred": "kalau",
+            "ok": true
+          },
+          {
+            "surface": "makan",
+            "gold": "makan",
+            "pred": "makan",
+            "ok": true
+          },
+          {
+            "surface": "sejuk-sejuk",
+            "gold": "sejuk",
+            "pred": "sejuk",
+            "ok": true
+          },
+          {
+            "surface": "masa",
+            "gold": "masa",
+            "pred": "masa",
+            "ok": true
+          },
+          {
+            "surface": "baru",
+            "gold": "baru",
+            "pred": "baru",
+            "ok": true
+          },
+          {
+            "surface": "keluar",
+            "gold": "keluar",
+            "pred": "keluar",
+            "ok": true
+          },
+          {
+            "surface": "peti",
+            "gold": "peti",
+            "pred": "peti",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Bila mesin dah bergerak, isi air hingga tub hampir penuh dan masukkan CUKA + SODA BIKARBONAT.",
+        "tokens": [
+          {
+            "surface": "Bila",
+            "gold": "bila",
+            "pred": "bila",
+            "ok": true
+          },
+          {
+            "surface": "mesin",
+            "gold": "mesin",
+            "pred": "mesin",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "bergerak",
+            "gold": "gerak",
+            "pred": "gerak",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "isi",
+            "gold": "isi",
+            "pred": "isi",
+            "ok": true
+          },
+          {
+            "surface": "air",
+            "gold": "air",
+            "pred": "air",
+            "ok": true
+          },
+          {
+            "surface": "hingga",
+            "gold": "hingga",
+            "pred": "hingga",
+            "ok": true
+          },
+          {
+            "surface": "tub",
+            "gold": "tub",
+            "pred": "tub",
+            "ok": true
+          },
+          {
+            "surface": "hampir",
+            "gold": "hampir",
+            "pred": "hampir",
+            "ok": true
+          },
+          {
+            "surface": "penuh",
+            "gold": "penuh",
+            "pred": "penuh",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "masukkan",
+            "gold": "masuk",
+            "pred": "masuk",
+            "ok": true
+          },
+          {
+            "surface": "CUKA",
+            "gold": "cuka",
+            "pred": "cuka",
+            "ok": true
+          },
+          {
+            "surface": "+",
+            "gold": "+",
+            "pred": "+",
+            "ok": true
+          },
+          {
+            "surface": "SODA",
+            "gold": "soda",
+            "pred": "soda",
+            "ok": true
+          },
+          {
+            "surface": "BIKARBONAT",
+            "gold": "bikarbonat",
+            "pred": "bikarbonat",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Nak pilih mainan untuk anak yang dah tahu bercakap mungkin agak mudah sebab mereka biasanya pandai meminta dan menunjukkan minat masing-masing.",
+        "tokens": [
+          {
+            "surface": "Nak",
+            "gold": "hendak",
+            "pred": "ank",
+            "ok": false
+          },
+          {
+            "surface": "pilih",
+            "gold": "pilih",
+            "pred": "pilih",
+            "ok": true
+          },
+          {
+            "surface": "mainan",
+            "gold": "main",
+            "pred": "mainan",
+            "ok": false
+          },
+          {
+            "surface": "untuk",
+            "gold": "untuk",
+            "pred": "untuk",
+            "ok": true
+          },
+          {
+            "surface": "anak",
+            "gold": "anak",
+            "pred": "anak",
+            "ok": true
+          },
+          {
+            "surface": "yang",
+            "gold": "yang",
+            "pred": "yang",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "dah",
+            "ok": false
+          },
+          {
+            "surface": "tahu",
+            "gold": "tahu",
+            "pred": "tahu",
+            "ok": true
+          },
+          {
+            "surface": "bercakap",
+            "gold": "cakap",
+            "pred": "cakap",
+            "ok": true
+          },
+          {
+            "surface": "mungkin",
+            "gold": "mungkin",
+            "pred": "mungkin",
+            "ok": true
+          },
+          {
+            "surface": "agak",
+            "gold": "agak",
+            "pred": "agak",
+            "ok": true
+          },
+          {
+            "surface": "mudah",
+            "gold": "mudah",
+            "pred": "mudah",
+            "ok": true
+          },
+          {
+            "surface": "sebab",
+            "gold": "sebab",
+            "pred": "bab",
+            "ok": false
+          },
+          {
+            "surface": "mereka",
+            "gold": "mereka",
+            "pred": "mereka",
+            "ok": true
+          },
+          {
+            "surface": "biasanya",
+            "gold": "biasa",
+            "pred": "biasa",
+            "ok": true
+          },
+          {
+            "surface": "pandai",
+            "gold": "pandai",
+            "pred": "pandai",
+            "ok": true
+          },
+          {
+            "surface": "meminta",
+            "gold": "minta",
+            "pred": "meminta",
+            "ok": false
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "menunjukkan",
+            "gold": "tunjuk",
+            "pred": "tunjuk",
+            "ok": true
+          },
+          {
+            "surface": "minat",
+            "gold": "minat",
+            "pred": "minat",
+            "ok": true
+          },
+          {
+            "surface": "masing-masing",
+            "gold": "masing-masing",
+            "pred": "masing-masing",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "- Anak-anak sering menyebut atau menceritakan apa saja kebaikan ibu bapa.",
+        "tokens": [
+          {
+            "surface": "-",
+            "gold": "-",
+            "pred": "-",
+            "ok": true
+          },
+          {
+            "surface": "Anak-anak",
+            "gold": "anak",
+            "pred": "anak",
+            "ok": true
+          },
+          {
+            "surface": "sering",
+            "gold": "sering",
+            "pred": "sering",
+            "ok": true
+          },
+          {
+            "surface": "menyebut",
+            "gold": "sebut",
+            "pred": "but",
+            "ok": false
+          },
+          {
+            "surface": "atau",
+            "gold": "atau",
+            "pred": "atau",
+            "ok": true
+          },
+          {
+            "surface": "menceritakan",
+            "gold": "cerita",
+            "pred": "cerita",
+            "ok": true
+          },
+          {
+            "surface": "apa",
+            "gold": "apa",
+            "pred": "apa",
+            "ok": true
+          },
+          {
+            "surface": "saja",
+            "gold": "saja",
+            "pred": "saja",
+            "ok": true
+          },
+          {
+            "surface": "kebaikan",
+            "gold": "baik",
+            "pred": "baik",
+            "ok": true
+          },
+          {
+            "surface": "ibu",
+            "gold": "ibu",
+            "pred": "ibu",
+            "ok": true
+          },
+          {
+            "surface": "bapa",
+            "gold": "bapa",
+            "pred": "bapa",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      }
+    ],
+    "sailor2_ft": [
+      {
+        "sentence": "Secara umumnya, di bawah ini adalah keadaan saf mengikut bilangan makmum dan jantinanya.",
+        "tokens": [
+          {
+            "surface": "Secara",
+            "gold": "cara",
+            "pred": "cara",
+            "ok": true
+          },
+          {
+            "surface": "umumnya",
+            "gold": "umum",
+            "pred": "umum",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "di",
+            "gold": "di",
+            "pred": "di",
+            "ok": true
+          },
+          {
+            "surface": "bawah",
+            "gold": "bawah",
+            "pred": "bawah",
+            "ok": true
+          },
+          {
+            "surface": "ini",
+            "gold": "ini",
+            "pred": "ini",
+            "ok": true
+          },
+          {
+            "surface": "adalah",
+            "gold": "adalah",
+            "pred": "adalah",
+            "ok": true
+          },
+          {
+            "surface": "keadaan",
+            "gold": "ada",
+            "pred": "ada",
+            "ok": true
+          },
+          {
+            "surface": "saf",
+            "gold": "saf",
+            "pred": "saf",
+            "ok": true
+          },
+          {
+            "surface": "mengikut",
+            "gold": "ikut",
+            "pred": "ikut",
+            "ok": true
+          },
+          {
+            "surface": "bilangan",
+            "gold": "bilang",
+            "pred": "bilang",
+            "ok": true
+          },
+          {
+            "surface": "makmum",
+            "gold": "makmum",
+            "pred": "makmum",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "jantinanya",
+            "gold": "jantina",
+            "pred": "jantina",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Duta lagi tu.",
+        "tokens": [
+          {
+            "surface": "Duta",
+            "gold": "duta",
+            "pred": "duta",
+            "ok": true
+          },
+          {
+            "surface": "lagi",
+            "gold": "lagi",
+            "pred": "lagi",
+            "ok": true
+          },
+          {
+            "surface": "tu",
+            "gold": "itu",
+            "pred": "itu",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Esok pagi bangun terus minum.",
+        "tokens": [
+          {
+            "surface": "Esok",
+            "gold": "esok",
+            "pred": "esok",
+            "ok": true
+          },
+          {
+            "surface": "pagi",
+            "gold": "pagi",
+            "pred": "pagi",
+            "ok": true
+          },
+          {
+            "surface": "bangun",
+            "gold": "bangun",
+            "pred": "bangun",
+            "ok": true
+          },
+          {
+            "surface": "terus",
+            "gold": "terus",
+            "pred": "terus",
+            "ok": true
+          },
+          {
+            "surface": "minum",
+            "gold": "minum",
+            "pred": "minum",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Bila doh tadi dah terapung ke permukaan air, maknanya tepungnya dah cukup masak.",
+        "tokens": [
+          {
+            "surface": "Bila",
+            "gold": "bila",
+            "pred": "bila",
+            "ok": true
+          },
+          {
+            "surface": "doh",
+            "gold": "doh",
+            "pred": "doh",
+            "ok": true
+          },
+          {
+            "surface": "tadi",
+            "gold": "tadi",
+            "pred": "tadi",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "sudah",
+            "ok": true
+          },
+          {
+            "surface": "terapung",
+            "gold": "apung",
+            "pred": "apung",
+            "ok": true
+          },
+          {
+            "surface": "ke",
+            "gold": "ke",
+            "pred": "ke",
+            "ok": true
+          },
+          {
+            "surface": "permukaan",
+            "gold": "muka",
+            "pred": "muka",
+            "ok": true
+          },
+          {
+            "surface": "air",
+            "gold": "air",
+            "pred": "air",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "maknanya",
+            "gold": "makna",
+            "pred": "makna",
+            "ok": true
+          },
+          {
+            "surface": "tepungnya",
+            "gold": "tepung",
+            "pred": "tepung",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "sudah",
+            "ok": true
+          },
+          {
+            "surface": "cukup",
+            "gold": "cukup",
+            "pred": "cukup",
+            "ok": true
+          },
+          {
+            "surface": "masak",
+            "gold": "masak",
+            "pred": "masak",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Serius sedap, lagi-lagi kalau makan sejuk-sejuk masa baru keluar peti.",
+        "tokens": [
+          {
+            "surface": "Serius",
+            "gold": "serius",
+            "pred": "serius",
+            "ok": true
+          },
+          {
+            "surface": "sedap",
+            "gold": "sedap",
+            "pred": "sedap",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "lagi-lagi",
+            "gold": "lagi",
+            "pred": "lagi",
+            "ok": true
+          },
+          {
+            "surface": "kalau",
+            "gold": "kalau",
+            "pred": "kalau",
+            "ok": true
+          },
+          {
+            "surface": "makan",
+            "gold": "makan",
+            "pred": "makan",
+            "ok": true
+          },
+          {
+            "surface": "sejuk-sejuk",
+            "gold": "sejuk",
+            "pred": "sejuk",
+            "ok": true
+          },
+          {
+            "surface": "masa",
+            "gold": "masa",
+            "pred": "masa",
+            "ok": true
+          },
+          {
+            "surface": "baru",
+            "gold": "baru",
+            "pred": "baru",
+            "ok": true
+          },
+          {
+            "surface": "keluar",
+            "gold": "keluar",
+            "pred": "keluar",
+            "ok": true
+          },
+          {
+            "surface": "peti",
+            "gold": "peti",
+            "pred": "peti",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Bila mesin dah bergerak, isi air hingga tub hampir penuh dan masukkan CUKA + SODA BIKARBONAT.",
+        "tokens": [
+          {
+            "surface": "Bila",
+            "gold": "bila",
+            "pred": "bila",
+            "ok": true
+          },
+          {
+            "surface": "mesin",
+            "gold": "mesin",
+            "pred": "mesin",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "sudah",
+            "ok": true
+          },
+          {
+            "surface": "bergerak",
+            "gold": "gerak",
+            "pred": "gerak",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "isi",
+            "gold": "isi",
+            "pred": "isi",
+            "ok": true
+          },
+          {
+            "surface": "air",
+            "gold": "air",
+            "pred": "air",
+            "ok": true
+          },
+          {
+            "surface": "hingga",
+            "gold": "hingga",
+            "pred": "hingga",
+            "ok": true
+          },
+          {
+            "surface": "tub",
+            "gold": "tub",
+            "pred": "tub",
+            "ok": true
+          },
+          {
+            "surface": "hampir",
+            "gold": "hampir",
+            "pred": "hampir",
+            "ok": true
+          },
+          {
+            "surface": "penuh",
+            "gold": "penuh",
+            "pred": "penuh",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "masukkan",
+            "gold": "masuk",
+            "pred": "masuk",
+            "ok": true
+          },
+          {
+            "surface": "CUKA",
+            "gold": "cuka",
+            "pred": "cuka",
+            "ok": true
+          },
+          {
+            "surface": "+",
+            "gold": "+",
+            "pred": "+",
+            "ok": true
+          },
+          {
+            "surface": "SODA",
+            "gold": "soda",
+            "pred": "soda",
+            "ok": true
+          },
+          {
+            "surface": "BIKARBONAT",
+            "gold": "bikarbonat",
+            "pred": "bikarbonat",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Nak pilih mainan untuk anak yang dah tahu bercakap mungkin agak mudah sebab mereka biasanya pandai meminta dan menunjukkan minat masing-masing.",
+        "tokens": [
+          {
+            "surface": "Nak",
+            "gold": "hendak",
+            "pred": "hendak",
+            "ok": true
+          },
+          {
+            "surface": "pilih",
+            "gold": "pilih",
+            "pred": "pilih",
+            "ok": true
+          },
+          {
+            "surface": "mainan",
+            "gold": "main",
+            "pred": "main",
+            "ok": true
+          },
+          {
+            "surface": "untuk",
+            "gold": "untuk",
+            "pred": "untuk",
+            "ok": true
+          },
+          {
+            "surface": "anak",
+            "gold": "anak",
+            "pred": "anak",
+            "ok": true
+          },
+          {
+            "surface": "yang",
+            "gold": "yang",
+            "pred": "yang",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "sudah",
+            "ok": true
+          },
+          {
+            "surface": "tahu",
+            "gold": "tahu",
+            "pred": "tahu",
+            "ok": true
+          },
+          {
+            "surface": "bercakap",
+            "gold": "cakap",
+            "pred": "cakap",
+            "ok": true
+          },
+          {
+            "surface": "mungkin",
+            "gold": "mungkin",
+            "pred": "mungkin",
+            "ok": true
+          },
+          {
+            "surface": "agak",
+            "gold": "agak",
+            "pred": "agak",
+            "ok": true
+          },
+          {
+            "surface": "mudah",
+            "gold": "mudah",
+            "pred": "mudah",
+            "ok": true
+          },
+          {
+            "surface": "sebab",
+            "gold": "sebab",
+            "pred": "sebab",
+            "ok": true
+          },
+          {
+            "surface": "mereka",
+            "gold": "mereka",
+            "pred": "mereka",
+            "ok": true
+          },
+          {
+            "surface": "biasanya",
+            "gold": "biasa",
+            "pred": "biasa",
+            "ok": true
+          },
+          {
+            "surface": "pandai",
+            "gold": "pandai",
+            "pred": "pandai",
+            "ok": true
+          },
+          {
+            "surface": "meminta",
+            "gold": "minta",
+            "pred": "minta",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "menunjukkan",
+            "gold": "tunjuk",
+            "pred": "tunjuk",
+            "ok": true
+          },
+          {
+            "surface": "minat",
+            "gold": "minat",
+            "pred": "minat",
+            "ok": true
+          },
+          {
+            "surface": "masing-masing",
+            "gold": "masing-masing",
+            "pred": "masing-masing",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "- Anak-anak sering menyebut atau menceritakan apa saja kebaikan ibu bapa.",
+        "tokens": [
+          {
+            "surface": "-",
+            "gold": "-",
+            "pred": "-",
+            "ok": true
+          },
+          {
+            "surface": "Anak-anak",
+            "gold": "anak",
+            "pred": "anak",
+            "ok": true
+          },
+          {
+            "surface": "sering",
+            "gold": "sering",
+            "pred": "sering",
+            "ok": true
+          },
+          {
+            "surface": "menyebut",
+            "gold": "sebut",
+            "pred": "sebut",
+            "ok": true
+          },
+          {
+            "surface": "atau",
+            "gold": "atau",
+            "pred": "atau",
+            "ok": true
+          },
+          {
+            "surface": "menceritakan",
+            "gold": "cerita",
+            "pred": "cerita",
+            "ok": true
+          },
+          {
+            "surface": "apa",
+            "gold": "apa",
+            "pred": "apa",
+            "ok": true
+          },
+          {
+            "surface": "saja",
+            "gold": "saja",
+            "pred": "saja",
+            "ok": true
+          },
+          {
+            "surface": "kebaikan",
+            "gold": "baik",
+            "pred": "baik",
+            "ok": true
+          },
+          {
+            "surface": "ibu",
+            "gold": "ibu",
+            "pred": "ibu",
+            "ok": true
+          },
+          {
+            "surface": "bapa",
+            "gold": "bapa",
+            "pred": "bapa",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      }
+    ],
+    "llama_ft": [
+      {
+        "sentence": "Secara umumnya, di bawah ini adalah keadaan saf mengikut bilangan makmum dan jantinanya.",
+        "tokens": [
+          {
+            "surface": "Secara",
+            "gold": "cara",
+            "pred": "cara",
+            "ok": true
+          },
+          {
+            "surface": "umumnya",
+            "gold": "umum",
+            "pred": "umum",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "di",
+            "gold": "di",
+            "pred": "di",
+            "ok": true
+          },
+          {
+            "surface": "bawah",
+            "gold": "bawah",
+            "pred": "bawah",
+            "ok": true
+          },
+          {
+            "surface": "ini",
+            "gold": "ini",
+            "pred": "ini",
+            "ok": true
+          },
+          {
+            "surface": "adalah",
+            "gold": "adalah",
+            "pred": "adalah",
+            "ok": true
+          },
+          {
+            "surface": "keadaan",
+            "gold": "ada",
+            "pred": "ada",
+            "ok": true
+          },
+          {
+            "surface": "saf",
+            "gold": "saf",
+            "pred": "saf",
+            "ok": true
+          },
+          {
+            "surface": "mengikut",
+            "gold": "ikut",
+            "pred": "ikut",
+            "ok": true
+          },
+          {
+            "surface": "bilangan",
+            "gold": "bilang",
+            "pred": "bilang",
+            "ok": true
+          },
+          {
+            "surface": "makmum",
+            "gold": "makmum",
+            "pred": "makmum",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "jantinanya",
+            "gold": "jantina",
+            "pred": "jantan",
+            "ok": false
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Duta lagi tu.",
+        "tokens": [
+          {
+            "surface": "Duta",
+            "gold": "duta",
+            "pred": "duta",
+            "ok": true
+          },
+          {
+            "surface": "lagi",
+            "gold": "lagi",
+            "pred": "lagi",
+            "ok": true
+          },
+          {
+            "surface": "tu",
+            "gold": "itu",
+            "pred": "itu",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Esok pagi bangun terus minum.",
+        "tokens": [
+          {
+            "surface": "Esok",
+            "gold": "esok",
+            "pred": "esok",
+            "ok": true
+          },
+          {
+            "surface": "pagi",
+            "gold": "pagi",
+            "pred": "pagi",
+            "ok": true
+          },
+          {
+            "surface": "bangun",
+            "gold": "bangun",
+            "pred": "bangun",
+            "ok": true
+          },
+          {
+            "surface": "terus",
+            "gold": "terus",
+            "pred": "terus",
+            "ok": true
+          },
+          {
+            "surface": "minum",
+            "gold": "minum",
+            "pred": "minum",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Bila doh tadi dah terapung ke permukaan air, maknanya tepungnya dah cukup masak.",
+        "tokens": [
+          {
+            "surface": "Bila",
+            "gold": "bila",
+            "pred": "bila",
+            "ok": true
+          },
+          {
+            "surface": "doh",
+            "gold": "doh",
+            "pred": "doh",
+            "ok": true
+          },
+          {
+            "surface": "tadi",
+            "gold": "tadi",
+            "pred": "tadi",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "sudah",
+            "ok": true
+          },
+          {
+            "surface": "terapung",
+            "gold": "apung",
+            "pred": "apung",
+            "ok": true
+          },
+          {
+            "surface": "ke",
+            "gold": "ke",
+            "pred": "ke",
+            "ok": true
+          },
+          {
+            "surface": "permukaan",
+            "gold": "muka",
+            "pred": "muka",
+            "ok": true
+          },
+          {
+            "surface": "air",
+            "gold": "air",
+            "pred": "air",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "maknanya",
+            "gold": "makna",
+            "pred": "makna",
+            "ok": true
+          },
+          {
+            "surface": "tepungnya",
+            "gold": "tepung",
+            "pred": "tepung",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "sudah",
+            "ok": true
+          },
+          {
+            "surface": "cukup",
+            "gold": "cukup",
+            "pred": "cukup",
+            "ok": true
+          },
+          {
+            "surface": "masak",
+            "gold": "masak",
+            "pred": "masak",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Serius sedap, lagi-lagi kalau makan sejuk-sejuk masa baru keluar peti.",
+        "tokens": [
+          {
+            "surface": "Serius",
+            "gold": "serius",
+            "pred": "serius",
+            "ok": true
+          },
+          {
+            "surface": "sedap",
+            "gold": "sedap",
+            "pred": "sedap",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "lagi-lagi",
+            "gold": "lagi",
+            "pred": "lagi",
+            "ok": true
+          },
+          {
+            "surface": "kalau",
+            "gold": "kalau",
+            "pred": "kalau",
+            "ok": true
+          },
+          {
+            "surface": "makan",
+            "gold": "makan",
+            "pred": "makan",
+            "ok": true
+          },
+          {
+            "surface": "sejuk-sejuk",
+            "gold": "sejuk",
+            "pred": "sejuk",
+            "ok": true
+          },
+          {
+            "surface": "masa",
+            "gold": "masa",
+            "pred": "masa",
+            "ok": true
+          },
+          {
+            "surface": "baru",
+            "gold": "baru",
+            "pred": "baru",
+            "ok": true
+          },
+          {
+            "surface": "keluar",
+            "gold": "keluar",
+            "pred": "keluar",
+            "ok": true
+          },
+          {
+            "surface": "peti",
+            "gold": "peti",
+            "pred": "peti",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Bila mesin dah bergerak, isi air hingga tub hampir penuh dan masukkan CUKA + SODA BIKARBONAT.",
+        "tokens": [
+          {
+            "surface": "Bila",
+            "gold": "bila",
+            "pred": "bila",
+            "ok": true
+          },
+          {
+            "surface": "mesin",
+            "gold": "mesin",
+            "pred": "mesin",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "sudah",
+            "ok": true
+          },
+          {
+            "surface": "bergerak",
+            "gold": "gerak",
+            "pred": "gerak",
+            "ok": true
+          },
+          {
+            "surface": ",",
+            "gold": ",",
+            "pred": ",",
+            "ok": true
+          },
+          {
+            "surface": "isi",
+            "gold": "isi",
+            "pred": "isi",
+            "ok": true
+          },
+          {
+            "surface": "air",
+            "gold": "air",
+            "pred": "air",
+            "ok": true
+          },
+          {
+            "surface": "hingga",
+            "gold": "hingga",
+            "pred": "hingga",
+            "ok": true
+          },
+          {
+            "surface": "tub",
+            "gold": "tub",
+            "pred": "tub",
+            "ok": true
+          },
+          {
+            "surface": "hampir",
+            "gold": "hampir",
+            "pred": "hampir",
+            "ok": true
+          },
+          {
+            "surface": "penuh",
+            "gold": "penuh",
+            "pred": "penuh",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "masukkan",
+            "gold": "masuk",
+            "pred": "masuk",
+            "ok": true
+          },
+          {
+            "surface": "CUKA",
+            "gold": "cuka",
+            "pred": "cuka",
+            "ok": true
+          },
+          {
+            "surface": "+",
+            "gold": "+",
+            "pred": "+",
+            "ok": true
+          },
+          {
+            "surface": "SODA",
+            "gold": "soda",
+            "pred": "soda",
+            "ok": true
+          },
+          {
+            "surface": "BIKARBONAT",
+            "gold": "bikarbonat",
+            "pred": "bicarbonate",
+            "ok": false
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "Nak pilih mainan untuk anak yang dah tahu bercakap mungkin agak mudah sebab mereka biasanya pandai meminta dan menunjukkan minat masing-masing.",
+        "tokens": [
+          {
+            "surface": "Nak",
+            "gold": "hendak",
+            "pred": "hendak",
+            "ok": true
+          },
+          {
+            "surface": "pilih",
+            "gold": "pilih",
+            "pred": "pilih",
+            "ok": true
+          },
+          {
+            "surface": "mainan",
+            "gold": "main",
+            "pred": "main",
+            "ok": true
+          },
+          {
+            "surface": "untuk",
+            "gold": "untuk",
+            "pred": "untuk",
+            "ok": true
+          },
+          {
+            "surface": "anak",
+            "gold": "anak",
+            "pred": "anak",
+            "ok": true
+          },
+          {
+            "surface": "yang",
+            "gold": "yang",
+            "pred": "yang",
+            "ok": true
+          },
+          {
+            "surface": "dah",
+            "gold": "sudah",
+            "pred": "sudah",
+            "ok": true
+          },
+          {
+            "surface": "tahu",
+            "gold": "tahu",
+            "pred": "tahu",
+            "ok": true
+          },
+          {
+            "surface": "bercakap",
+            "gold": "cakap",
+            "pred": "cakap",
+            "ok": true
+          },
+          {
+            "surface": "mungkin",
+            "gold": "mungkin",
+            "pred": "mungkin",
+            "ok": true
+          },
+          {
+            "surface": "agak",
+            "gold": "agak",
+            "pred": "agak",
+            "ok": true
+          },
+          {
+            "surface": "mudah",
+            "gold": "mudah",
+            "pred": "mudah",
+            "ok": true
+          },
+          {
+            "surface": "sebab",
+            "gold": "sebab",
+            "pred": "sebab",
+            "ok": true
+          },
+          {
+            "surface": "mereka",
+            "gold": "mereka",
+            "pred": "mereka",
+            "ok": true
+          },
+          {
+            "surface": "biasanya",
+            "gold": "biasa",
+            "pred": "biasa",
+            "ok": true
+          },
+          {
+            "surface": "pandai",
+            "gold": "pandai",
+            "pred": "pandai",
+            "ok": true
+          },
+          {
+            "surface": "meminta",
+            "gold": "minta",
+            "pred": "minta",
+            "ok": true
+          },
+          {
+            "surface": "dan",
+            "gold": "dan",
+            "pred": "dan",
+            "ok": true
+          },
+          {
+            "surface": "menunjukkan",
+            "gold": "tunjuk",
+            "pred": "tunjuk",
+            "ok": true
+          },
+          {
+            "surface": "minat",
+            "gold": "minat",
+            "pred": "minat",
+            "ok": true
+          },
+          {
+            "surface": "masing-masing",
+            "gold": "masing-masing",
+            "pred": "masing-masing",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "sentence": "- Anak-anak sering menyebut atau menceritakan apa saja kebaikan ibu bapa.",
+        "tokens": [
+          {
+            "surface": "-",
+            "gold": "-",
+            "pred": "-",
+            "ok": true
+          },
+          {
+            "surface": "Anak-anak",
+            "gold": "anak",
+            "pred": "anak",
+            "ok": true
+          },
+          {
+            "surface": "sering",
+            "gold": "sering",
+            "pred": "sering",
+            "ok": true
+          },
+          {
+            "surface": "menyebut",
+            "gold": "sebut",
+            "pred": "sebut",
+            "ok": true
+          },
+          {
+            "surface": "atau",
+            "gold": "atau",
+            "pred": "atau",
+            "ok": true
+          },
+          {
+            "surface": "menceritakan",
+            "gold": "cerita",
+            "pred": "cerita",
+            "ok": true
+          },
+          {
+            "surface": "apa",
+            "gold": "apa",
+            "pred": "apa",
+            "ok": true
+          },
+          {
+            "surface": "saja",
+            "gold": "saja",
+            "pred": "saja",
+            "ok": true
+          },
+          {
+            "surface": "kebaikan",
+            "gold": "baik",
+            "pred": "baik",
+            "ok": true
+          },
+          {
+            "surface": "ibu",
+            "gold": "ibu",
+            "pred": "ibu",
+            "ok": true
+          },
+          {
+            "surface": "bapa",
+            "gold": "bapa",
+            "pred": "bapa",
+            "ok": true
+          },
+          {
+            "surface": ".",
+            "gold": ".",
+            "pred": ".",
+            "ok": true
+          }
+        ]
+      }
+    ]
+  }
+}
