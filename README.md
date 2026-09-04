@@ -25,13 +25,15 @@ words and punctuation untouched.
 Takes the raw scraped forum dump (`data/raw/siraplimau.com.jsonl`) and produces a clean, sentence-segmented corpus plus a word→lemma reference dictionary.
 
 Pipeline stages:
-1. **Structural / boilerplate cleanup**: Removes site-specific junk (TikTok footers, tags, embeds, widgets).
-2. **Language / content filtering**: Keeps only valid Malay/Indonesian text; drops near-empty or foreign-script pages.
-3. **Normalization**: Unicode NFC, whitespace collapsing, punctuation handling, and casing.
-4. **Tokenization**: Sentence and word tokenization (using Malaya if available, regex fallback otherwise).
-5. **Stopword removal**: Optional side artifact generation.
-6. **Lemmatization**: Base lemmatization via `malaya.stem.sastrawi()`.
-7. **Slang / Short-form normalisation**: Integrates curated rojak mappings (`data/raw/BM_dict.csv`) and builds a manual tagging scaffold.
+1. **Load data** (`data/raw/siraplimau.com.jsonl`): Reads the raw scraped corpus, one JSON object per article.
+2. **Structural / boilerplate cleanup**: Removes site-specific junk — TikTok footers, CMS tag lines, tweet/Facebook embeds, image-carousel widgets.
+3. **Language / content filtering**: Keeps only valid Malay/Indonesian text; drops near-empty, duplicate, or foreign-script pages.
+4. **Normalization**: Unicode NFC, whitespace collapsing, punctuation handling, cased + lowercased variants per document.
+5. **Sentence & word tokenization**: Uses Malaya's tokenizer if available, regex fallback otherwise.
+6. **Slang / short-form normalization** *(5b)*: Maps casual short forms to standard Malay using curated rojak mappings (`data/raw/BM_dict.csv`). A CSV of auto-detected candidates (`data/processed/short_form_candidates.csv`) can be filled manually and re-applied.
+7. **Stopword removal** *(optional)*: Built as a side artifact; off by default since the output feeds embeddings/LLMs, not BoW models.
+8. **Lemmatization**: Via `malaya.stem.sastrawi()` — fast rule/dictionary-based, CPU-only.
+9. **Assemble & save**: Writes `data/processed/siraplimau_cleaned.jsonl` (one row per doc with sentence/token/lemma arrays) and `data/processed/word_lemma_dictionary.json` (every unique `token → lemma` pair seen in the corpus — the gold reference used to build training data).
 
 | Output | Contents |
 |---|---|
