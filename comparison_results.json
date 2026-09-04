@@ -58,18 +58,18 @@
     "stem_lstm_512": {
       "n_sentences": 200,
       "n_gold_tokens": 3170,
-      "token_accuracy": 0.9034700315457413,
-      "lemma_accuracy": 0.657856093979442,
-      "precision": 0.8028673835125448,
-      "recall": 0.6956521739130435,
-      "f1": 0.7454242928452579,
+      "token_accuracy": 0.9201892744479495,
+      "lemma_accuracy": 0.6886930983847284,
+      "precision": 0.8882575757575758,
+      "recall": 0.7073906485671192,
+      "f1": 0.7875734676742234,
       "coverage": 1.0,
       "unparseable_rate": 0.0,
       "n_gold_transformed": 681,
-      "tp": 448,
-      "fp": 110,
-      "fn": 196,
-      "runtime_sec": 12.6
+      "tp": 469,
+      "fp": 59,
+      "fn": 194,
+      "runtime_sec": 12.2
     },
     "sailor2_ft": {
       "n_sentences": 200,
@@ -85,23 +85,23 @@
       "tp": 579,
       "fp": 26,
       "fn": 99,
-      "runtime_sec": 963.4
+      "runtime_sec": 926.0
     },
     "llama_ft": {
       "n_sentences": 200,
       "n_gold_tokens": 3170,
-      "token_accuracy": 0.8914826498422713,
-      "lemma_accuracy": 0.8751835535976505,
-      "precision": 0.9475357710651828,
-      "recall": 0.8895522388059701,
-      "f1": 0.9176289453425712,
-      "coverage": 0.9037854889589906,
+      "token_accuracy": 0.8873817034700315,
+      "lemma_accuracy": 0.8707782672540382,
+      "precision": 0.9472843450479234,
+      "recall": 0.8850746268656716,
+      "f1": 0.9151234567901234,
+      "coverage": 0.8996845425867508,
       "unparseable_rate": 0.045,
       "n_gold_transformed": 681,
-      "tp": 596,
+      "tp": 593,
       "fp": 33,
-      "fn": 74,
-      "runtime_sec": 794.9
+      "fn": 77,
+      "runtime_sec": 767.8
     }
   },
   "examples": {
@@ -2128,8 +2128,8 @@
           {
             "surface": "di",
             "gold": "di",
-            "pred": "k",
-            "ok": false
+            "pred": "di",
+            "ok": true
           },
           {
             "surface": "bawah",
@@ -2311,8 +2311,8 @@
           {
             "surface": "permukaan",
             "gold": "muka",
-            "pred": "permukaan",
-            "ok": false
+            "pred": "muka",
+            "ok": true
           },
           {
             "surface": "air",
@@ -2465,8 +2465,8 @@
           {
             "surface": "bergerak",
             "gold": "gerak",
-            "pred": "gerak",
-            "ok": true
+            "pred": "bergerak",
+            "ok": false
           },
           {
             "surface": ",",
@@ -2560,7 +2560,7 @@
           {
             "surface": "Nak",
             "gold": "hendak",
-            "pred": "ank",
+            "pred": "nak",
             "ok": false
           },
           {
