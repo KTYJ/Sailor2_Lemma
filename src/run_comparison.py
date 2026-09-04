@@ -32,7 +32,7 @@ def parse_args():
                     help="comma-separated system keys (default: all)")
     ap.add_argument("--n", type=int, default=H.DEFAULT_N, help="held-out sentences to score")
     ap.add_argument("--seed", type=int, default=H.DEFAULT_SEED, help="sampling seed")
-    ap.add_argument("--out", default="comparison_results.json")
+    ap.add_argument("--out", default="results/comparison_results.json")
     ap.add_argument("--skip-missing", action="store_true", default=True,
                     help="skip a system whose dependencies fail to load (default on)")
     ap.add_argument("--no-skip-missing", dest="skip_missing", action="store_false")

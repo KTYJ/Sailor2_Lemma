@@ -32,7 +32,7 @@ from train_lemmatizer_lora import (
 )
 
 BASE_MODEL_ID = "mesolitica/Malaysian-Llama-3.2-3B-Instruct"
-TRAIN_PATH = Path("cleaned/lemma_sft_train.jsonl")
+TRAIN_PATH = Path("data/processed/lemma_sft_train.jsonl")
 ADAPTER_OUT = Path("trained_models/llama_malay_lemmatizer_lora_adapter")
 MERGED_OUT = Path("trained_models/llama_malay_lemmatizer")
 CHECKPOINT_PATH = Path("trained_models/llama_lora_checkpoint_partial")

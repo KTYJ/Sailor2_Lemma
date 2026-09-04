@@ -81,19 +81,19 @@ def load_llama():
 
 @st.cache_resource(show_spinner="Loading Malaya Naive stemmer...")
 def load_malaya_naive():
-    from lemmatizer_systems import MalayaNaiveSystem
+    from src.lemmatizer_systems import MalayaNaiveSystem
     return MalayaNaiveSystem()
 
 
 @st.cache_resource(show_spinner="Loading Sastrawi stemmer...")
 def load_sastrawi():
-    from lemmatizer_systems import SastrawiSystem
+    from src.lemmatizer_systems import SastrawiSystem
     return SastrawiSystem()
 
 
 @st.cache_resource(show_spinner="Loading Stem LSTM-512 (downloads on first run)...")
 def load_stem_lstm():
-    from lemmatizer_systems import StemLstm512System
+    from src.lemmatizer_systems import StemLstm512System
     return StemLstm512System()
 
 
@@ -190,7 +190,7 @@ def run_all_systems(sentence: str) -> dict:
 @st.cache_data
 def load_comparison_results():
     import os
-    path = "comparison_results.json"
+    path = "results/comparison_results.json"
     if not os.path.isfile(path):
         return None
     with open(path, encoding="utf-8") as f:
@@ -335,7 +335,7 @@ tab_lemmatizer, tab_performance = st.tabs(["🔤 Lemmatizer", "📊 Model Perfor
 with tab_performance:
     perf_data = load_comparison_results()
     if perf_data is None:
-        st.warning("comparison_results.json not found. Run run_comparison.py to generate it.")
+        st.warning("results/comparison_results.json not found. Run run_comparison.py to generate it.")
     else:
         render_performance_page(perf_data)
 

@@ -20,20 +20,24 @@ words and punctuation untouched.
 
 ![Pipeline Workflow](workflow.png)
 
-### 1. Corpus cleaning — `malay_corpus_cleaning_pipeline.ipynb`
+### 1. Corpus cleaning — `src/malay_corpus_cleaning_pipeline.ipynb`
 
-Takes the raw scraped forum dump and produces a clean, sentence-segmented corpus plus a
-word→lemma reference dictionary.
+Takes the raw scraped forum dump (`data/raw/siraplimau.com.jsonl`) and produces a clean, sentence-segmented corpus plus a word→lemma reference dictionary.
 
-Steps: dedup/normalise text → sentence & word tokenisation (Malaya, regex fallback) →
-short-form/slang normalisation (`malaya.dictionary.rules_normalizer` + `BM_dict.csv` curated
-rojak mappings) → stopword handling → lemmatisation via `malaya.stem.sastrawi()`.
+Pipeline stages:
+1. **Structural / boilerplate cleanup**: Removes site-specific junk (TikTok footers, tags, embeds, widgets).
+2. **Language / content filtering**: Keeps only valid Malay/Indonesian text; drops near-empty or foreign-script pages.
+3. **Normalization**: Unicode NFC, whitespace collapsing, punctuation handling, and casing.
+4. **Tokenization**: Sentence and word tokenization (using Malaya if available, regex fallback otherwise).
+5. **Stopword removal**: Optional side artifact generation.
+6. **Lemmatization**: Base lemmatization via `malaya.stem.sastrawi()`.
+7. **Slang / Short-form normalisation**: Integrates curated rojak mappings (`data/raw/BM_dict.csv`) and builds a manual tagging scaffold.
 
 | Output | Contents |
 |---|---|
-| `cleaned/siraplimau_cleaned.jsonl` / `.parquet` | cleaned corpus, one row per document with a `sentences` list |
-| `cleaned/word_lemma_dictionary.json` | word → lemma (identity fallback, overlaid with curated mappings) — the gold reference |
-| `cleaned/short_form_candidates.csv`, `manual_tagging_template.csv`, `manual_tags.json` | manual slang-tagging workflow artefacts |
+| `data/processed/siraplimau_cleaned.jsonl` / `.parquet` | cleaned corpus, one row per document with a `sentences` list |
+| `data/processed/word_lemma_dictionary.json` | word → lemma (identity fallback, overlaid with curated mappings) — the gold reference |
+| `data/processed/short_form_candidates.csv`, `manual_tagging_template.csv`, `manual_tags.json` | manual slang-tagging workflow artefacts |
 
 ### 2. Build training data — `build_lemma_sft_data.py`
 

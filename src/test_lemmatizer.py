@@ -14,7 +14,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 MODEL_DIR = "./trained_models/sailor2_malay_lemmatizer"
-GOLD_PATH = Path("cleaned/word_lemma_dictionary.json")
+GOLD_PATH = Path("data/processed/word_lemma_dictionary.json")
 
 SYSTEM_PROMPT = (
     "You are a Malay-English (Rojak) linguistic lemmatizer. "
@@ -121,7 +121,7 @@ def main():
         print("No words could be matched against the gold dictionary "
               "(model output likely not valid JSON / not in expected format).")
 
-    Path("test_lemmatizer_results.json").write_text(
+    Path("results/test_lemmatizer_results.json").write_text(
         json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     print("Full results written to test_lemmatizer_results.json")

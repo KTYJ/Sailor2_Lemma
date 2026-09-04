@@ -17,7 +17,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, get_linear_schedul
 from peft import LoraConfig, get_peft_model
 
 BASE_MODEL_ID = "sail/Sailor2-3B-Chat"
-TRAIN_PATH = Path("cleaned/lemma_sft_train.jsonl")
+TRAIN_PATH = Path("data/processed/lemma_sft_train.jsonl")
 ADAPTER_OUT = Path("trained_models/sailor2_malay_lemmatizer_lora_adapter")
 MERGED_OUT = Path("trained_models/sailor2_malay_lemmatizer")
 CHECKPOINT_PATH = Path("trained_models/lora_checkpoint_partial")

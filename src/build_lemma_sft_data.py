@@ -17,11 +17,11 @@ import random
 import re
 from pathlib import Path
 
-CLEANED_JSONL = Path("cleaned/siraplimau_cleaned.jsonl")
-GOLD_DICT = Path("cleaned/word_lemma_dictionary.json")
-BM_DICT_CSV = Path("BM_dict.csv")
-OUT_TRAIN = Path("cleaned/lemma_sft_train.jsonl")
-OUT_EVAL = Path("cleaned/lemma_sft_eval.jsonl")
+CLEANED_JSONL = Path("data/processed/siraplimau_cleaned.jsonl")
+GOLD_DICT = Path("data/processed/word_lemma_dictionary.json")
+BM_DICT_CSV = Path("data/raw/BM_dict.csv")
+OUT_TRAIN = Path("data/processed/lemma_sft_train.jsonl")
+OUT_EVAL = Path("data/processed/lemma_sft_eval.jsonl")
 
 TOKEN_RE = re.compile(r"[A-Za-z]+(?:['-][A-Za-z]+)*|\d+|[^\w\s]", re.UNICODE)
 

@@ -33,7 +33,7 @@ import re
 from pathlib import Path
 from typing import Iterable
 
-EVAL_PATH = Path("cleaned/lemma_sft_eval.jsonl")
+EVAL_PATH = Path("data/processed/lemma_sft_eval.jsonl")
 DEFAULT_N = 200
 DEFAULT_SEED = 7
 
