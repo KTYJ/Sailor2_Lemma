@@ -20,20 +20,26 @@ words and punctuation untouched.
 
 ![Pipeline Workflow](workflow.png)
 
-### 1. Corpus cleaning — `malay_corpus_cleaning_pipeline.ipynb`
+### 1. Corpus cleaning — `src/malay_corpus_cleaning_pipeline.ipynb`
 
-Takes the raw scraped forum dump and produces a clean, sentence-segmented corpus plus a
-word→lemma reference dictionary.
+Takes the raw scraped forum dump (`data/raw/siraplimau.com.jsonl`) and produces a clean, sentence-segmented corpus plus a word→lemma reference dictionary.
 
-Steps: dedup/normalise text → sentence & word tokenisation (Malaya, regex fallback) →
-short-form/slang normalisation (`malaya.dictionary.rules_normalizer` + `BM_dict.csv` curated
-rojak mappings) → stopword handling → lemmatisation via `malaya.stem.sastrawi()`.
+Pipeline stages:
+1. **Load data** (`data/raw/siraplimau.com.jsonl`): Reads the raw scraped corpus, one JSON object per article.
+2. **Structural / boilerplate cleanup**: Removes site-specific junk — TikTok footers, CMS tag lines, tweet/Facebook embeds, image-carousel widgets.
+3. **Language / content filtering**: Keeps only valid Malay/Indonesian text; drops near-empty, duplicate, or foreign-script pages.
+4. **Normalization**: Unicode NFC, whitespace collapsing, punctuation handling, cased + lowercased variants per document.
+5. **Sentence & word tokenization**: Uses Malaya's tokenizer if available, regex fallback otherwise.
+6. **Slang / short-form normalization** *(5b)*: Maps casual short forms to standard Malay using curated rojak mappings (`data/raw/BM_dict.csv`). A CSV of auto-detected candidates (`data/processed/short_form_candidates.csv`) can be filled manually and re-applied.
+7. **Stopword removal** *(optional)*: Built as a side artifact; off by default since the output feeds embeddings/LLMs, not BoW models.
+8. **Lemmatization**: Via `malaya.stem.sastrawi()` — fast rule/dictionary-based, CPU-only.
+9. **Assemble & save**: Writes `data/processed/siraplimau_cleaned.jsonl` (one row per doc with sentence/token/lemma arrays) and `data/processed/word_lemma_dictionary.json` (every unique `token → lemma` pair seen in the corpus — the gold reference used to build training data).
 
 | Output | Contents |
 |---|---|
-| `cleaned/siraplimau_cleaned.jsonl` / `.parquet` | cleaned corpus, one row per document with a `sentences` list |
-| `cleaned/word_lemma_dictionary.json` | word → lemma (identity fallback, overlaid with curated mappings) — the gold reference |
-| `cleaned/short_form_candidates.csv`, `manual_tagging_template.csv`, `manual_tags.json` | manual slang-tagging workflow artefacts |
+| `data/processed/siraplimau_cleaned.jsonl` / `.parquet` | cleaned corpus, one row per document with a `sentences` list |
+| `data/processed/word_lemma_dictionary.json` | word → lemma (identity fallback, overlaid with curated mappings) — the gold reference |
+| `data/processed/short_form_candidates.csv`, `manual_tagging_template.csv`, `manual_tags.json` | manual slang-tagging workflow artefacts |
 
 ### 2. Build training data — `build_lemma_sft_data.py`
 
@@ -75,14 +81,10 @@ python train_llama_lemmatizer_lora.py
 
 ### 4. Evaluate & compare
 
-Two entry points, both scoring against the gold `{surface, lemma}` targets in
+**`run_comparison.py`** — the section 3.1.4 comparison table, and the single entry point for
+evaluation. All systems, one shared held-out sample, one alignment routine, one metric set
+(`eval_harness.py`), scored against the gold `{surface, lemma}` targets in
 `cleaned/lemma_sft_eval.jsonl`:
-
-**`eval_lemmatizer_heldout.py`** — the proposed Sailor2 model alone, on a 200-sentence
-held-out sample. Quick single-model check with qualitative examples.
-
-**`run_comparison.py`** — the section 3.1.4 comparison table. All systems, one shared
-held-out sample, one alignment routine, one metric set (`eval_harness.py`):
 
 | System key | What it is |
 |---|---|
@@ -129,7 +131,6 @@ python demo_lemmatizer.py                 # runs the model on fresh hand-written
 | `build_lemma_sft_data.py` | train/eval counts, one sample row | `cleaned/lemma_sft_train.jsonl`, `cleaned/lemma_sft_eval.jsonl` |
 | `train_lemmatizer_lora.py` | per-10-step loss, lr, elapsed; merge progress | `trained_models/sailor2_malay_lemmatizer/` (+ `metadata.json`), `..._lora_adapter/`, `lora_checkpoint_partial/`. Redirect stdout to keep a log (e.g. `train_run.log`). |
 | `train_llama_lemmatizer_lora.py` | same | `trained_models/llama_malay_lemmatizer/` (+ `metadata.json`), `..._lora_adapter/`, `llama_lora_checkpoint_partial/` |
-| `eval_lemmatizer_heldout.py` | running word-accuracy, final accuracy / unparseable / token-count-match, 8 qualitative examples | **`eval_lemmatizer_heldout_results.json`** — `word_accuracy`, totals, `n_unparseable`, `examples[]` |
 | `run_comparison.py` | per-system metric line during the run, then the full **comparison table** and a metric legend; lists any skipped systems | **`comparison_results.json`** — `meta` (sample size, seed, skipped), `results` (per-system metric dict), `examples` (first 8 aligned sentences per system). Path overridable with `--out`. |
 | `test_lemmatizer.py` | word-level agreement with the gold dictionary on 5 test sentences | `test_lemmatizer_results.json` |
 | `demo_lemmatizer.py` | model output per sentence + timing | *(nothing — stdout only)* |
@@ -183,12 +184,11 @@ CUDA 12.8+ build (`sm_120`) or the LLM paths fail to load.
 | `train_lemmatizer_lora.py` / `train_llama_lemmatizer_lora.py` | fine-tuning (step 3) |
 | `eval_harness.py` | shared sampling + alignment + metrics |
 | `lemmatizer_systems.py` | all systems behind one `predict_batch` interface |
-| `run_comparison.py` | comparison-table entry point |
-| `eval_lemmatizer_heldout.py` | single-model held-out eval |
+| `run_comparison.py` | comparison-table entry point (all-systems evaluation) |
 | `test_lemmatizer.py` / `demo_lemmatizer.py` | qualitative checks |
 | `app.py` | Streamlit UI |
 | `BM_dict.csv` | curated rojak-slang → standard-Malay mappings |
 | `cleaned/` | cleaned corpus, dictionary, SFT splits |
 | `data/raw/` | external Malaya/Malaysia-AI stemmer datasets |
 | `trained_models/` | merged checkpoints + LoRA adapters (git-ignored) |
-| `*_results.json`, `*.log` | evaluation outputs and run logs |
+| `results/` | evaluation outputs and run logs — generated by the scripts above; re-run `run_comparison.py` / `train_*.py` to regenerate |
