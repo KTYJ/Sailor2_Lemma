@@ -18,7 +18,7 @@ words and punctuation untouched.
 
 ## Pipeline
 
-![Pipeline Workflow](workflow.png)
+![Pipeline Workflow](workflow.jpg)
 
 ### 1. Corpus cleaning — `src/malay_corpus_cleaning_pipeline.ipynb`
 
