@@ -92,6 +92,8 @@ evaluation. All systems, one shared held-out sample, one alignment routine, one 
 | `malaya_naive` | `malaya.stem.naive()` reimplemented in pure Python — regex prefix/suffix stripping, no dictionary check (over-stems: `menarik → arik`). The paper's "Naive Stemmer from the Malaya library". |
 | `sastrawi` | `malaya.stem.sastrawi()` reimplemented — PySastrawi confix-stripping + lemmatisation, behind Malaya's pass-through/casing wrapper. Conservative. |
 | `stem_lstm_512` | `mesolitica/stem-lstm-512` char-LSTM seq2seq stemmer, loaded via `malaya.stem.huggingface()` (needs torch). `stem_gru_bahdanau_1024` also available. |
+| `sailor2_base` | base, zero-shot un-finetuned Sailor2-3B-Chat for comparison |
+| `llama_base` | base, zero-shot un-finetuned Malaysian-Llama for comparison |
 | `sailor2` | **proposed** fine-tuned Sailor2 |
 | `llama` | fine-tuned Malaysian-Llama (comparison LLM) |
 
