@@ -14,6 +14,7 @@ Then: python run_comparison.py --systems sailor2,llama
 """
 from __future__ import annotations
 
+import csv
 import json
 import math
 import shutil
@@ -36,6 +37,7 @@ TRAIN_PATH = Path("data/processed/lemma_sft_train.jsonl")
 ADAPTER_OUT = Path("trained_models/llama_malay_lemmatizer_lora_adapter")
 MERGED_OUT = Path("trained_models/llama_malay_lemmatizer")
 CHECKPOINT_PATH = Path("trained_models/llama_lora_checkpoint_partial")
+TRAINING_CSV_PATH = Path("results/training_llama.csv")
 
 # Llama-3 end-of-turn tokens to add as stop ids on the merged model.
 EOT_TOKENS = ["<|eot_id|>", "<|end_of_text|>"]
@@ -85,6 +87,11 @@ def main():
     running_count = 0
     t_start = time.time()
 
+    TRAINING_CSV_PATH.parent.mkdir(parents=True, exist_ok=True)
+    csv_file = TRAINING_CSV_PATH.open("w", newline="", encoding="utf-8")
+    csv_writer = csv.writer(csv_file)
+    csv_writer.writerow(["step", "epoch", "loss", "lr"])
+
     for epoch in range(EPOCHS):
         optimizer.zero_grad()
         for i, batch in enumerate(loader):
@@ -107,15 +114,21 @@ def main():
                 if global_step % LOG_EVERY == 0:
                     avg_loss = running_loss / max(1, running_count)
                     elapsed = time.time() - t_start
+                    lr = scheduler.get_last_lr()[0]
                     print(f"epoch {epoch} step {global_step}/{total_steps} "
                           f"loss={avg_loss:.4f} elapsed={elapsed / 60:.1f}min "
-                          f"lr={scheduler.get_last_lr()[0]:.2e}")
+                          f"lr={lr:.2e}")
+                    csv_writer.writerow([global_step, epoch, f"{avg_loss:.4f}", f"{lr:.2e}"])
+                    csv_file.flush()
                     running_loss = 0.0
                     running_count = 0
 
                 if global_step % SAVE_EVERY == 0:
                     print(f"Saving checkpoint at step {global_step} -> {CHECKPOINT_PATH}")
                     model.save_pretrained(str(CHECKPOINT_PATH))
+
+    csv_file.close()
+    print(f"Training curve written to {TRAINING_CSV_PATH}")
 
     print("\nTraining complete. Saving final LoRA adapter ->", ADAPTER_OUT)
     ADAPTER_OUT.mkdir(parents=True, exist_ok=True)
