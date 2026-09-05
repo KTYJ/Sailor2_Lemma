@@ -18,6 +18,9 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 SAILOR2_DIR = "./trained_models/sailor2_malay_lemmatizer"
 LLAMA_DIR   = "./trained_models/llama_malay_lemmatizer"
 
+SAILOR2_BASE_ID = "sail/Sailor2-3B-Chat"
+LLAMA_BASE_ID   = "mesolitica/Malaysian-Llama-3.2-3B-Instruct"
+
 SYSTEM_PROMPT = (
     "You are a Malay-English (Rojak) linguistic lemmatizer. "
     "Given a sentence, return a JSON list of objects with 'surface' and 'lemma'. "
@@ -72,6 +75,30 @@ def load_llama():
     tokenizer = AutoTokenizer.from_pretrained(LLAMA_DIR)
     model = AutoModelForCausalLM.from_pretrained(
         LLAMA_DIR, dtype=torch.bfloat16, attn_implementation="eager"
+    )
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model.to(device)
+    model.eval()
+    return tokenizer, model, device
+
+
+@st.cache_resource(show_spinner="Loading base Sailor2 model (no fine-tuning, downloads on first run)...")
+def load_sailor2_base():
+    tokenizer = AutoTokenizer.from_pretrained(SAILOR2_BASE_ID)
+    model = AutoModelForCausalLM.from_pretrained(
+        SAILOR2_BASE_ID, dtype=torch.bfloat16, attn_implementation="eager"
+    )
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model.to(device)
+    model.eval()
+    return tokenizer, model, device
+
+
+@st.cache_resource(show_spinner="Loading base Llama model (no fine-tuning, downloads on first run)...")
+def load_llama_base():
+    tokenizer = AutoTokenizer.from_pretrained(LLAMA_BASE_ID)
+    model = AutoModelForCausalLM.from_pretrained(
+        LLAMA_BASE_ID, dtype=torch.bfloat16, attn_implementation="eager"
     )
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model.to(device)
@@ -138,6 +165,16 @@ def run_llama(sentence: str):
     tokenizer, model, device = load_llama()
     if tokenizer is None:
         return None, 0.0, "[Llama model not found at trained_models/llama_malay_lemmatizer]"
+    return _run_causal_lm(tokenizer, model, device, sentence)
+
+
+def run_sailor2_base(sentence: str):
+    tokenizer, model, device = load_sailor2_base()
+    return _run_causal_lm(tokenizer, model, device, sentence)
+
+
+def run_llama_base(sentence: str):
+    tokenizer, model, device = load_llama_base()
     return _run_causal_lm(tokenizer, model, device, sentence)
 
 
@@ -261,7 +298,7 @@ def render_performance_page(data: dict):
 
     numeric_cols = [METRIC_LABELS[mk] for mk in metric_keys]
     styled = df.style.apply(highlight_best, subset=numeric_cols)
-    st.dataframe(styled, use_container_width=True, hide_index=True)
+    st.dataframe(styled, width="stretch", hide_index=True)
 
     st.divider()
 
@@ -282,7 +319,7 @@ def render_performance_page(data: dict):
         })
         with cols[i % 2]:
             st.markdown(f"**{title}**")
-            st.bar_chart(chart_data.set_index("System"), y=title, use_container_width=True)
+            st.bar_chart(chart_data.set_index("System"), y=title, width="stretch")
 
     st.divider()
 
@@ -291,7 +328,7 @@ def render_performance_page(data: dict):
     err_table = {"System": [SYSTEM_PRETTY.get(s, s) for s in systems_present]}
     for col_name, key in [("TP (Correct)", "tp"), ("FP (Over-stemmed)", "fp"), ("FN (Missed)", "fn")]:
         err_table[col_name] = [results[s].get(key, 0) for s in systems_present]
-    st.dataframe(pd.DataFrame(err_table), use_container_width=True, hide_index=True)
+    st.dataframe(pd.DataFrame(err_table), width="stretch", hide_index=True)
 
     # ---------- example sentences
     examples = data.get("examples", {})
@@ -316,7 +353,7 @@ def render_performance_page(data: dict):
                             "Predicted": t["pred"],
                             "Correct": "✅" if t["ok"] else "❌",
                         } for t in tokens])
-                        st.dataframe(ex_df, use_container_width=True, hide_index=True)
+                        st.dataframe(ex_df, width="stretch", hide_index=True)
 
 
 # ------------------------------------------------------------------ UI
@@ -363,7 +400,7 @@ with tab_lemmatizer:
     st.subheader("Try an example")
     cols = st.columns(2)
     for i, ex in enumerate(EXAMPLE_SENTENCES):
-        if cols[i % 2].button(ex, use_container_width=True):
+        if cols[i % 2].button(ex, width="stretch"):
             st.session_state["sentence_input"] = ex
 
     sentence = st.text_area(
@@ -473,3 +510,48 @@ with tab_lemmatizer:
                 if raw_response is not None:
                     with st.expander(f"Raw model output ({selected_label})"):
                         st.code(raw_response, language="json")
+
+    st.divider()
+    st.subheader("🧪 Base Model Raw Output (No Fine-tuning)")
+    st.caption(
+        "Runs the un-tuned base checkpoints (same prompt, same generation settings as the "
+        "fine-tuned models) so you can see exactly what they output before LoRA training — "
+        "useful for inspecting why zero-shot accuracy/unparse-rate looks the way it does."
+    )
+
+    base_label = st.radio(
+        "Base model",
+        options=["🤖 Sailor2 (Base, no fine-tuning)", "🦙 Llama (Base, no fine-tuning)"],
+        horizontal=True,
+        key="base_model_choice",
+    )
+
+    base_sentence = st.text_area(
+        "Sentence",
+        key="base_sentence_input",
+        height=100,
+        placeholder="e.g. Kitorang xnak main sama dia sebab dia asyik toxic je.",
+    )
+
+    if st.button("Run base model ▶", type="secondary", disabled=not base_sentence.strip()):
+        with st.spinner(f"Running {base_label}..."):
+            if base_label.startswith("🤖"):
+                parsed, elapsed, raw_response = run_sailor2_base(base_sentence.strip())
+            else:
+                parsed, elapsed, raw_response = run_llama_base(base_sentence.strip())
+
+        st.info(f"Inference time: **{elapsed:.3f}s**", icon="⏱")
+
+        st.markdown("**Raw model output (unparsed):**")
+        st.code(raw_response, language="text")
+
+        if parsed is None:
+            st.error("Could not extract a valid JSON list from this output.")
+        else:
+            rows = [p for p in parsed if isinstance(p, dict) and "surface" in p and "lemma" in p]
+            if rows:
+                st.markdown("**Parsed result:**")
+                st.table({"Surface": [str(r["surface"]) for r in rows],
+                          "Lemma":   [str(r["lemma"])   for r in rows]})
+            else:
+                st.warning("JSON parsed but did not contain valid surface/lemma objects.")

@@ -3,6 +3,7 @@
 .venv-1/
 venv/
 env/
+scratch/
 
 # Large model weights & checkpoints
 trained_models/

@@ -330,6 +330,10 @@ def build_system(key: str):
         return _causal_lm("./trained_models/sailor2_malay_lemmatizer", "sailor2_ft")
     if key in ("llama", "llama_ft"):
         return _causal_lm("./trained_models/llama_malay_lemmatizer", "llama_ft")
+    if key in ("sailor2_base", "sailor2_zeroshot"):
+        return CausalLMSystem("sail/Sailor2-3B-Chat", "sailor2_base")
+    if key in ("llama_base", "llama_zeroshot"):
+        return CausalLMSystem("mesolitica/Malaysian-Llama-3.2-3B-Instruct", "llama_base")
     raise KeyError(f"unknown system: {key!r}")
 
 
@@ -343,5 +347,6 @@ def _causal_lm(model_dir: str, name: str) -> "CausalLMSystem":
 
 
 ALL_SYSTEMS = [
-    "identity", "malaya_naive", "sastrawi", "stem_lstm_512", "sailor2", "llama",
+    "identity", "malaya_naive", "sastrawi", "stem_lstm_512",
+    "sailor2_base", "llama_base", "sailor2", "llama",
 ]

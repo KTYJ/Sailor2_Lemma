@@ -1,9 +1,11 @@
-"""LoRA SFT of Sailor2-8B-Chat on the rojak lemmatization task.
+"""LoRA SFT of Sailor2-3B-Chat on the rojak lemmatization task.
 
 Trains a LoRA adapter (base weights frozen, fp16) on cleaned/lemma_sft_train.jsonl, using the
 same system/user chat prompt format as test_lemmatizer.py. Loss is masked to the assistant's
 JSON response only. Saves the adapter, then a merged full model overwriting
 trained_models/sailor2_malay_lemmatizer/.
+
+IMPORTANT: CHECK OUPUT PATYH VARIABLES (ADAPTER_OUT, MERGED_OUT) BEFORE TRAINING, to avoid overwriting existing models.
 """
 import json
 import math
